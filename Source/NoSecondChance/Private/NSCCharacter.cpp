@@ -35,6 +35,7 @@
 #include "PhysicsEngine/PhysicsAsset.h"
 #include "PhysicalMaterials/PhysicalMaterial.h"
 #include "Misc/EngineVersionComparison.h"
+#include "AnimationRuntime.h"
 
 namespace NSCPaths
 {
@@ -83,6 +84,7 @@ ANSCCharacter::ANSCCharacter(const FObjectInitializer& ObjectInitializer)
 	Mesh1P->CastShadow = false;
 	Mesh1P->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	Mesh1P->SetRelativeLocation(FVector(-5.f, 0.f, -155.f));
+	Mesh1P->SetRelativeRotation(FRotator(0.f, -90.f, 0.f)); // arms are posed in their rest pose (Tools/blender/make_arms.py), facing +Y like the body
 
 	WeaponMesh1P = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("WeaponMesh1P"));
 	WeaponMesh1P->SetupAttachment(FirstPersonCamera);
@@ -173,6 +175,39 @@ void ANSCCharacter::UpdateBodyVariant()
 	AnimCache.Reset();
 	CurrentAnimName = NAME_None;
 	ApplyTeamLook();
+	FitGearToBody();
+}
+
+void ANSCCharacter::FitGearToBody()
+{
+	// Gear meshes are baked with the origin at their bottom centre, facing the same way as the body (glTF +Z front).
+	// Place them in reference-pose component space, then express that relative to the bone they follow.
+	USkeletalMeshComponent* Body = GetMesh();
+	const USkeletalMesh* Asset = Body ? Body->GetSkeletalMeshAsset() : nullptr;
+	if (!Asset) { return; }
+	const FReferenceSkeleton& Ref = Asset->GetRefSkeleton();
+	auto RefCS = [&Ref](const TCHAR* Bone, FTransform& Out)
+	{
+		const int32 Index = Ref.FindBoneIndex(FName(Bone));
+		if (Index == INDEX_NONE) { return false; }
+		Out = FAnimationRuntime::GetComponentSpaceTransformRefPose(Ref, Index);
+		return true;
+	};
+	FTransform HeadCS, SpineCS, PelvisCS;
+	if (HelmetMesh->GetStaticMesh() && RefCS(TEXT("Head"), HeadCS))
+	{
+		const FTransform Desired = HelmetOffset * FTransform(HeadCS.GetLocation());
+		HelmetMesh->AttachToComponent(Body, FAttachmentTransformRules::KeepRelativeTransform, TEXT("Head"));
+		HelmetMesh->SetRelativeTransform(Desired.GetRelativeTransform(HeadCS));
+	}
+	if (VestMesh->GetStaticMesh() && RefCS(TEXT("spine_03"), SpineCS))
+	{
+		const float WaistZ = RefCS(TEXT("pelvis"), PelvisCS) ? PelvisCS.GetLocation().Z + 12.f : SpineCS.GetLocation().Z - 40.f;
+		const FVector Loc(SpineCS.GetLocation().X, SpineCS.GetLocation().Y, WaistZ);
+		const FTransform Desired = VestOffset * FTransform(Loc);
+		VestMesh->AttachToComponent(Body, FAttachmentTransformRules::KeepRelativeTransform, TEXT("spine_03"));
+		VestMesh->SetRelativeTransform(Desired.GetRelativeTransform(SpineCS));
+	}
 }
 
 void ANSCCharacter::LoadCharacterMeshes()
@@ -190,13 +225,12 @@ void ANSCCharacter::LoadCharacterMeshes()
 	if (UStaticMesh* Helmet = LoadObject<UStaticMesh>(nullptr, NSCPaths::HelmetMesh, nullptr, LOAD_NoWarn | LOAD_Quiet))
 	{
 		HelmetMesh->SetStaticMesh(Helmet);
-		HelmetMesh->SetRelativeTransform(HelmetOffset);
 	}
 	if (UStaticMesh* Vest = LoadObject<UStaticMesh>(nullptr, NSCPaths::VestMesh, nullptr, LOAD_NoWarn | LOAD_Quiet))
 	{
 		VestMesh->SetStaticMesh(Vest);
-		VestMesh->SetRelativeTransform(VestOffset);
 	}
+	FitGearToBody();
 	PlayAnim(TEXT("A_Idle"), true);
 }
 

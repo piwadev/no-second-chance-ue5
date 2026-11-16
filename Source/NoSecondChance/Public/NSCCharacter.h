@@ -171,9 +171,11 @@ protected:
 	UPROPERTY(VisibleAnywhere, Category = "NSC") TObjectPtr<UStaticMeshComponent> WeaponMesh3P;
 	UPROPERTY(VisibleAnywhere, Category = "NSC") TObjectPtr<UStaticMeshComponent> HelmetMesh;
 	UPROPERTY(VisibleAnywhere, Category = "NSC") TObjectPtr<UStaticMeshComponent> VestMesh;
-	/** Gear placement relative to the Head / spine_03 bones; tune in a Blueprint child if the imported skeleton's bone axes differ. */
-	UPROPERTY(EditDefaultsOnly, Category = "NSC|Gear") FTransform HelmetOffset = FTransform(FRotator(0.f, -90.f, -90.f), FVector(10.f, 0.f, 0.f));
-	UPROPERTY(EditDefaultsOnly, Category = "NSC|Gear") FTransform VestOffset = FTransform(FRotator(0.f, -90.f, -90.f), FVector(-8.f, 0.f, 0.f));
+	/** Extra gear offsets in mesh-component space (Z up, the body faces +Y), applied on top of the automatic fit:
+	 *  helmet bottom just above the Head bone, plate carrier from the waist up around spine_03 (see FitGearToBody). */
+	UPROPERTY(EditDefaultsOnly, Category = "NSC|Gear") FTransform HelmetOffset = FTransform(FVector(0.f, 1.5f, 6.f));
+	UPROPERTY(EditDefaultsOnly, Category = "NSC|Gear") FTransform VestOffset = FTransform(FVector(0.f, 1.f, 0.f));
+	void FitGearToBody();
 	/** Male / female body, picked from the player id so both appear on each team. */
 	bool bFemaleBody = false;
 	bool bBodyLoaded = false;

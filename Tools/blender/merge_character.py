@@ -42,6 +42,34 @@ for act in list(bpy.data.actions):
     names.append(act.name)
 print('ACTIONS', len(names), sorted(names))
 
-bpy.ops.export_scene.gltf(filepath=out_path, export_format='GLB', export_animations=True,
-                          export_animation_mode='NLA_TRACKS', export_yup=True, export_apply=False)
+# ---- uniform mask as vertex colours (the UBC body texture is bare skin): R = clothing, G = trousers, B = gloves/boots.
+# M_NSC_Soldier in Unreal turns the masked areas into a team-coloured combat uniform.
+def zone(bone):
+    b = bone.lower()
+    if b.startswith(('head', 'neck')): return (0.0, 0.0, 0.0)
+    if b.startswith(('hand', 'index', 'middle', 'pinky', 'ring', 'thumb', 'foot', 'ball')): return (1.0, 0.0, 1.0)
+    if b.startswith(('pelvis', 'thigh', 'calf')): return (1.0, 1.0, 0.0)
+    return (1.0, 0.0, 0.0)
+for o in [o for o in bpy.context.scene.objects if o.type == 'MESH']:
+    me = o.data
+    for i, ca in enumerate(list(me.color_attributes)):   # Unreal only reads COLOR_0: drop the source colour layers
+        if not ca.name: ca.name = f'old_col_{i}'
+    for n in [ca.name for ca in me.color_attributes]:
+        me.attributes.remove(me.attributes[n])
+    attr = me.color_attributes.new('Col', 'BYTE_COLOR', 'POINT')
+    groups = {g.index: g.name for g in o.vertex_groups}
+    for v in me.vertices:
+        c = (0.0, 0.0, 0.0)
+        if groups and v.groups:
+            g = max(v.groups, key=lambda e: e.weight)
+            c = zone(groups.get(g.group, 'Head'))
+        attr.data[v.index].color = (c[0], c[1], c[2], 1.0)
+    me.color_attributes.active_color = attr
+    me.color_attributes.render_color_index = me.color_attributes.find('Col')
+
+kw = dict(filepath=out_path, export_format='GLB', export_animations=True, export_animation_mode='NLA_TRACKS', export_yup=True, export_apply=False)
+try:
+    bpy.ops.export_scene.gltf(export_vertex_color='ACTIVE', **kw)
+except TypeError:
+    bpy.ops.export_scene.gltf(export_colors=True, **kw)
 print('WROTE', out_path)
