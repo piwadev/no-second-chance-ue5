@@ -85,6 +85,10 @@ ENSCHitZone UNSCHealthComponent::ZoneFromHeight(float Z01, float SideSign)
 float UNSCHealthComponent::ApplyHit(const FNSCHitInfo& Hit)
 {
 	if (!GetOwner() || !GetOwner()->HasAuthority() || bDead) { return 0.f; }
+	if (const ANSCGameMode* FFMode = GetWorld() ? GetWorld()->GetAuthGameMode<ANSCGameMode>() : nullptr)
+	{
+		if (!FFMode->ShouldTakeDamage(GetNSCOwner(), Hit.Instigator.Get())) { return 0.f; }
+	}
 
 	// Zone multipliers (head uses the weapon's head multiplier)
 	float Dmg = Hit.BaseDamage;

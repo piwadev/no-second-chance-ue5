@@ -55,6 +55,9 @@ UCLASS(ClassGroup = (NSC), meta = (BlueprintSpawnableComponent))
 class NOSECONDCHANCE_API UNSCWeaponComponent : public UActorComponent
 {
 	GENERATED_BODY()
+	friend class ANSCGameMode;
+	friend class ANSCAIController;
+	friend class UNSCHUDWidget;
 
 public:
 	UNSCWeaponComponent();

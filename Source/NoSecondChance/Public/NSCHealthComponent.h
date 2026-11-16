@@ -33,6 +33,8 @@ UCLASS(ClassGroup = (NSC), meta = (BlueprintSpawnableComponent))
 class NOSECONDCHANCE_API UNSCHealthComponent : public UActorComponent
 {
 	GENERATED_BODY()
+	friend class ANSCGameMode;
+	friend class ANSCAIController;
 
 public:
 	UNSCHealthComponent();
@@ -71,6 +73,7 @@ public:
 
 	/** Movement speed multiplier from injuries (leg wound, critical state). */
 	float GetMovementMultiplier() const;
+	const TMap<TWeakObjectPtr<AController>, float>& GetDamageBy() const { return DamageByController; }
 	/** Spread / recoil multiplier from an arm wound. */
 	float GetHandlingMultiplier() const { return bArmInjured ? 1.35f : 1.f; }
 	float GetReloadMultiplier() const { return bArmInjured ? 1.25f : 1.f; }

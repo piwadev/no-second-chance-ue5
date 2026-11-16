@@ -97,6 +97,8 @@ public:
 	void SetWantsSprint(bool b);
 	void SetWantsWalk(bool b);
 	float BotFlashedUntil = 0.f;
+	/** Server: last teammate who dragged this character while downed (for the Rescue stat). */
+	TWeakObjectPtr<AController> LastDraggedBy;
 
 	/** Third-person body color per team (sets "TeamColor" on the body material if it has one). */
 	void ApplyTeamLook();

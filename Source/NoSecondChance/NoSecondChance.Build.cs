@@ -12,7 +12,7 @@ public class NoSecondChance : ModuleRules
 			"UMG", "Slate", "SlateCore",
 			"AIModule", "NavigationSystem", "GameplayTasks",
 			"PhysicsCore", "NetCore",
-			"OnlineSubsystem", "OnlineSubsystemUtils"
+			"OnlineSubsystem", "OnlineSubsystemUtils", "EngineSettings"
 		});
 
 		DynamicallyLoadedModuleNames.Add("OnlineSubsystemNull");

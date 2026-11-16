@@ -595,6 +595,7 @@ void ANSCCharacter::ServerStartDrag_Internal()
 	if (!Downed || Downed->IsBeingDragged()) { return; }
 	DragTarget = Downed;
 	Downed->DraggedBy = this;
+	Downed->LastDraggedBy = GetController();
 	CurrentAction = ENSCActionType::Dragging;
 	Weapons->StopFire();
 	if (bIsCrouched) { UnCrouch(); }
