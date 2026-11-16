@@ -90,7 +90,7 @@ WEAPONS = {
     'Glock': ('polyy1', 'polyy1/**/compact_polymer_pistol_low.glb', 'polymer pistol'),
     'USP': ('stein', 'stein/WeaponsPack/1911', '1911 (stand-in)'),
     'P226': ('ge', 'ge/Guns&Explosives/Pistol_MK', 'Makarov (stand-in)'),
-    'Deagle': ('polyy2', 'polyy2/**/long_slide_magnum_pistol_low.glb', 'magnum pistol'),
+    'Deagle': ('polyy1', 'polyy1/**/six_shot_revolver_low.glb', 'magnum revolver (stand-in)'),
     'Grenade_Smoke': ('ge', 'ge/Guns&Explosives/Smoke_Grenade', 'smoke grenade'),
     'Grenade_Flash': ('ge', 'ge/Guns&Explosives/Flashbang', 'flashbang'),
     'Grenade_Frag': ('ge', 'ge/Guns&Explosives/FragGrenade', 'frag grenade'),

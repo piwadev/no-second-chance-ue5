@@ -1,0 +1,8 @@
+{
+ "_doc": "Real-world length (m) per weapon id and orientation overrides used by Tools/normalize_weapons.py; check SourceAssets/Weapons/<Id>/preview_<Id>.png (barrel must point right, top up).",
+ "AK": {"length": 0.88}, "M4": {"length": 0.84}, "HK416": {"length": 0.86}, "DMR": {"length": 1.12},
+ "Bolt": {"length": 1.15}, "LMG": {"length": 1.05, "flipX": true}, "MP5": {"length": 0.68}, "MP7": {"length": 0.60},
+ "UMP": {"length": 0.62}, "Pump": {"length": 1.0}, "AutoShotgun": {"length": 1.02}, "Glock": {"length": 0.19},
+ "USP": {"length": 0.21}, "P226": {"length": 0.18, "dropLoose": true}, "Deagle": {"length": 0.27},
+ "Grenade_Smoke": {"length": 0.15}, "Grenade_Flash": {"length": 0.14}, "Grenade_Frag": {"length": 0.11}, "Charge": {"length": 0.30}
+}
