@@ -170,6 +170,14 @@ protected:
 	UPROPERTY(VisibleAnywhere, Category = "NSC") TObjectPtr<UStaticMeshComponent> WeaponMesh1P;
 	UPROPERTY(VisibleAnywhere, Category = "NSC") TObjectPtr<UStaticMeshComponent> WeaponMesh3P;
 	UPROPERTY(VisibleAnywhere, Category = "NSC") TObjectPtr<UStaticMeshComponent> HelmetMesh;
+	UPROPERTY(VisibleAnywhere, Category = "NSC") TObjectPtr<UStaticMeshComponent> VestMesh;
+	/** Gear placement relative to the Head / spine_03 bones; tune in a Blueprint child if the imported skeleton's bone axes differ. */
+	UPROPERTY(EditDefaultsOnly, Category = "NSC|Gear") FTransform HelmetOffset = FTransform(FRotator(0.f, -90.f, -90.f), FVector(10.f, 0.f, 0.f));
+	UPROPERTY(EditDefaultsOnly, Category = "NSC|Gear") FTransform VestOffset = FTransform(FRotator(0.f, -90.f, -90.f), FVector(-8.f, 0.f, 0.f));
+	/** Male / female body, picked from the player id so both appear on each team. */
+	bool bFemaleBody = false;
+	bool bBodyLoaded = false;
+	void UpdateBodyVariant();
 	UPROPERTY(VisibleAnywhere, Category = "NSC") TObjectPtr<UPointLightComponent> MuzzleLight;
 	UPROPERTY(VisibleAnywhere, Category = "NSC") TObjectPtr<UNSCHealthComponent> Health;
 	UPROPERTY(VisibleAnywhere, Category = "NSC") TObjectPtr<UNSCWeaponComponent> Weapons;

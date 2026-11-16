@@ -33,13 +33,17 @@
 #include "Sound/SoundBase.h"
 #include "UObject/ConstructorHelpers.h"
 #include "PhysicsEngine/PhysicsAsset.h"
+#include "PhysicalMaterials/PhysicalMaterial.h"
 #include "Misc/EngineVersionComparison.h"
 
 namespace NSCPaths
 {
 	static const TCHAR* SoldierMesh = TEXT("/Game/NSC/Characters/Soldier/SK_Soldier.SK_Soldier");
 	static const TCHAR* ArmsMesh = TEXT("/Game/NSC/Characters/Arms/SK_Arms.SK_Arms");
+	static const TCHAR* SoldierMeshF = TEXT("/Game/NSC/Characters/SoldierF/SK_SoldierF.SK_SoldierF");
 	static const TCHAR* AnimFolder = TEXT("/Game/NSC/Characters/Anims/");
+	static const TCHAR* AnimFolderF = TEXT("/Game/NSC/Characters/AnimsF/");
+	static const TCHAR* VestMesh = TEXT("/Game/NSC/Characters/Gear/SM_PlateCarrier.SM_PlateCarrier");
 	static const TCHAR* HelmetMesh = TEXT("/Game/NSC/Characters/Gear/SM_Helmet.SM_Helmet");
 }
 
@@ -105,6 +109,12 @@ ANSCCharacter::ANSCCharacter(const FObjectInitializer& ObjectInitializer)
 	HelmetMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	HelmetMesh->SetVisibility(false);
 
+	VestMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("VestMesh"));
+	VestMesh->SetupAttachment(GetMesh(), TEXT("spine_03"));
+	VestMesh->SetOwnerNoSee(true);
+	VestMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	VestMesh->SetVisibility(false);
+
 	MuzzleLight = CreateDefaultSubobject<UPointLightComponent>(TEXT("MuzzleLight"));
 	MuzzleLight->SetupAttachment(FirstPersonCamera);
 	MuzzleLight->SetRelativeLocation(FVector(90.f, 12.f, -10.f));
@@ -144,12 +154,30 @@ void ANSCCharacter::BeginPlay()
 	ApplyTeamLook();
 }
 
+void ANSCCharacter::UpdateBodyVariant()
+{
+	const APlayerState* PS = GetPlayerState();
+	const bool bWantFemale = PS && (PS->GetPlayerId() % 2) == 1;
+	if (bBodyLoaded && bWantFemale == bFemaleBody) { return; }
+	bFemaleBody = bWantFemale;
+	USkeletalMesh* Body = nullptr;
+	if (bFemaleBody) { Body = LoadObject<USkeletalMesh>(nullptr, NSCPaths::SoldierMeshF, nullptr, LOAD_NoWarn | LOAD_Quiet); }
+	if (!Body)
+	{
+		bFemaleBody = false;
+		Body = LoadObject<USkeletalMesh>(nullptr, NSCPaths::SoldierMesh, nullptr, LOAD_NoWarn | LOAD_Quiet);
+	}
+	if (!Body) { return; }
+	bBodyLoaded = true;
+	GetMesh()->SetSkeletalMesh(Body);
+	AnimCache.Reset();
+	CurrentAnimName = NAME_None;
+	ApplyTeamLook();
+}
+
 void ANSCCharacter::LoadCharacterMeshes()
 {
-	if (USkeletalMesh* Body = LoadObject<USkeletalMesh>(nullptr, NSCPaths::SoldierMesh, nullptr, LOAD_NoWarn | LOAD_Quiet))
-	{
-		GetMesh()->SetSkeletalMesh(Body);
-	}
+	UpdateBodyVariant();
 	if (!GetMesh()->GetPhysicsAsset())
 	{
 		// No physics asset: hit the capsule instead and resolve the zone from hit height.
@@ -162,6 +190,12 @@ void ANSCCharacter::LoadCharacterMeshes()
 	if (UStaticMesh* Helmet = LoadObject<UStaticMesh>(nullptr, NSCPaths::HelmetMesh, nullptr, LOAD_NoWarn | LOAD_Quiet))
 	{
 		HelmetMesh->SetStaticMesh(Helmet);
+		HelmetMesh->SetRelativeTransform(HelmetOffset);
+	}
+	if (UStaticMesh* Vest = LoadObject<UStaticMesh>(nullptr, NSCPaths::VestMesh, nullptr, LOAD_NoWarn | LOAD_Quiet))
+	{
+		VestMesh->SetStaticMesh(Vest);
+		VestMesh->SetRelativeTransform(VestOffset);
 	}
 	PlayAnim(TEXT("A_Idle"), true);
 }
@@ -170,12 +204,14 @@ void ANSCCharacter::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);
 	if (const ANSCPlayerState* PS = GetPlayerState<ANSCPlayerState>()) { ReplicatedTeam = PS->GetTeam(); }
+	UpdateBodyVariant();
 	ApplyTeamLook();
 }
 
 void ANSCCharacter::OnRep_PlayerState()
 {
 	Super::OnRep_PlayerState();
+	UpdateBodyVariant();
 	ApplyTeamLook();
 }
 
@@ -757,7 +793,11 @@ void ANSCCharacter::RefreshWeaponVisuals()
 	const bool bAlive = Health && !Health->IsDead();
 	WeaponMesh1P->SetVisibility(bAlive && GunMesh != nullptr);
 	WeaponMesh3P->SetVisibility(bAlive && GunMesh != nullptr);
-	if (Health) { HelmetMesh->SetVisibility(Health->HasHelmet() && HelmetMesh->GetStaticMesh() != nullptr); }
+	if (Health)
+	{
+		HelmetMesh->SetVisibility(Health->HasHelmet() && HelmetMesh->GetStaticMesh() != nullptr);
+		VestMesh->SetVisibility(Health->GetArmor() > 0.f && VestMesh->GetStaticMesh() != nullptr);
+	}
 }
 
 void ANSCCharacter::PlayMuzzleFlash()
@@ -798,7 +838,7 @@ UAnimSequence* ANSCCharacter::FindAnim(const TCHAR* Name) const
 {
 	const FName Key(Name);
 	if (const TObjectPtr<UAnimSequence>* Found = AnimCache.Find(Key)) { return Found->Get(); }
-	const FString Path = FString::Printf(TEXT("%s%s.%s"), NSCPaths::AnimFolder, Name, Name);
+	const FString Path = FString::Printf(TEXT("%s%s.%s"), bFemaleBody ? NSCPaths::AnimFolderF : NSCPaths::AnimFolder, Name, Name);
 	UAnimSequence* Seq = LoadObject<UAnimSequence>(nullptr, *Path, nullptr, LOAD_NoWarn | LOAD_Quiet);
 	const_cast<ANSCCharacter*>(this)->AnimCache.Add(Key, Seq);
 	return Seq;
@@ -819,6 +859,11 @@ void ANSCCharacter::PlayAnim(const TCHAR* Name, bool bLoop, float Rate)
 
 void ANSCCharacter::TickAnimation(float DeltaSeconds)
 {
+	if (Health)
+	{
+		HelmetMesh->SetVisibility(!Health->IsDead() && Health->HasHelmet() && HelmetMesh->GetStaticMesh() != nullptr);
+		VestMesh->SetVisibility(!Health->IsDead() && Health->GetArmor() > 0.f && VestMesh->GetStaticMesh() != nullptr);
+	}
 	if (!Health || Health->IsDead()) { return; }
 	if (GetWorld()->GetTimeSeconds() < OneShotAnimUntil) { return; }
 	const float Speed = GetVelocity().Size2D();
@@ -895,7 +940,24 @@ void ANSCCharacter::TickFootsteps(float DeltaSeconds)
 	if (StepDistance < Stride) { return; }
 	StepDistance = 0.f;
 	const int32 Index = FMath::RandRange(1, 4);
-	const FString Path = FString::Printf(TEXT("/Game/NSC/Audio/Footsteps/SW_Step_Concrete_%02d.SW_Step_Concrete_%02d"), Index, Index);
+	// Surface from the physical material under our feet (PM_Metal / PM_Wood / PM_Grass / PM_Carpet ... set by the editor bootstrap)
+	const TCHAR* Surface = TEXT("Concrete");
+	{
+		FHitResult Floor;
+		FCollisionQueryParams FP(SCENE_QUERY_STAT(NSCFootstep), false, this);
+		FP.bReturnPhysicalMaterial = true;
+		const FVector Start = GetActorLocation();
+		if (GetWorld()->LineTraceSingleByChannel(Floor, Start, Start - FVector(0.f, 0.f, 160.f), ECC_Visibility, FP) && Floor.PhysMaterial.IsValid())
+		{
+			const FString PM = Floor.PhysMaterial->GetName();
+			if (PM.Contains(TEXT("Metal"))) { Surface = TEXT("Metal"); }
+			else if (PM.Contains(TEXT("Wood"))) { Surface = TEXT("Wood"); }
+			else if (PM.Contains(TEXT("Grass")) || PM.Contains(TEXT("Dirt"))) { Surface = TEXT("Grass"); }
+			else if (PM.Contains(TEXT("Carpet"))) { Surface = TEXT("Carpet"); }
+			else if (PM.Contains(TEXT("Gravel"))) { Surface = TEXT("Gravel"); }
+		}
+	}
+	const FString Path = FString::Printf(TEXT("/Game/NSC/Audio/Footsteps/SW_Step_%s_%02d.SW_Step_%s_%02d"), Surface, Index, Surface, Index);
 	if (USoundBase* S = LoadObject<USoundBase>(nullptr, *Path, nullptr, LOAD_NoWarn | LOAD_Quiet))
 	{
 		UGameplayStatics::PlaySoundAtLocation(this, S, GetActorLocation() - FVector(0, 0, 80.f), IsLocallyControlled() ? 0.45f : 0.9f);

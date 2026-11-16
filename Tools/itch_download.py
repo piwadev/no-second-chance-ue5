@@ -1,3 +1,4 @@
+# Usage: python itch_download.py <itch page url> [outdir] [name filter]
 # Download every file of a free itch.io asset page (no account needed for pay-what-you-want/free pages).
 import sys,re,json,urllib.request,urllib.parse,http.cookiejar,html,os
 cj=http.cookiejar.CookieJar(); op=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
@@ -12,4 +13,7 @@ for u,n in zip(ups,names):
     if flt and flt not in n: continue
     r=json.loads(post(f'{page}/file/{u}?source=view_game&as_props=1&after_download_lightbox=1',{'csrf_token':tok}))
     if 'url' not in r: print('ERR',n,str(r)[:200]); continue
-    f=os.path.join(out,n); data=op.open(r['url'],timeout=900).read(); open(f,'wb').write(data); print(f,len(data),flush=True)
+    resp=op.open(r['url'],timeout=900); data=resp.read()
+    fn=urllib.parse.unquote(os.path.basename(urllib.parse.urlparse(resp.geturl()).path)) or n
+    if '.' not in n and '.' in fn: n=fn
+    f=os.path.join(out,n.replace('/','_')); open(f,'wb').write(data); print(f,len(data),flush=True)
