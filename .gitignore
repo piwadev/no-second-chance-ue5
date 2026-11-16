@@ -1,0 +1,36 @@
+# Unreal build products
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+Build/
+Plugins/*/Binaries/
+Plugins/*/Intermediate/
+*.sln
+*.VC.db
+*.opensdf
+*.sdf
+*.suo
+*.xcworkspace
+.vs/
+.vscode/
+.idea/
+
+# Downloaded / generated asset sources (fetched by Tools/Setup.bat; see SourceAssets/README.md)
+SourceAssets/*
+!SourceAssets/README.md
+!SourceAssets/manifest.json
+
+# Optional packs you download yourself (Fab / Epic / UE4 weapon collection)
+Content/ThirdParty/
+
+# Launcher
+launcher/node_modules/
+launcher/dist/
+launcher/resources/bundled/
+release/out/
+*.zip
+*.7z
+*.log
+.DS_Store
+Thumbs.db
