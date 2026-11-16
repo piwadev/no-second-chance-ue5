@@ -1,0 +1,2815 @@
+{
+ "generated_by": "Tools/curate_assets.py",
+ "note": "Every asset is CC0 or OFL; see CREDITS.md",
+ "assets": [
+  {
+   "name": "AK",
+   "type": "weapon",
+   "files": [
+    "Weapons/AK/AK.fbx",
+    "Weapons/AK/T_AK_BC.png",
+    "Weapons/AK/T_AK_N.png",
+    "Weapons/AK/T_AK_ORM.png"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack",
+   "author": "Stein Games",
+   "license": "CC0-1.0",
+   "original": "AK-47"
+  },
+  {
+   "name": "M4",
+   "type": "weapon",
+   "files": [
+    "Weapons/M4/M4.fbx",
+    "Weapons/M4/T_M4_BC.png",
+    "Weapons/M4/T_M4_N.png",
+    "Weapons/M4/T_M4_ORM.png"
+   ],
+   "source": "https://3dmodelscc0.itch.io/free-cc0-guns-explosives-pack",
+   "author": "3DModelsCC0",
+   "license": "CC0-1.0",
+   "original": "M4A1"
+  },
+  {
+   "name": "HK416",
+   "type": "weapon",
+   "files": [
+    "Weapons/HK416/HK416.glb"
+   ],
+   "source": "https://polyyai.itch.io/3d-low-poly-guns-pack",
+   "author": "Polyy.AI (AI-assisted)",
+   "license": "CC0-1.0",
+   "original": "tactical carbine"
+  },
+  {
+   "name": "DMR",
+   "type": "weapon",
+   "files": [
+    "Weapons/DMR/DMR.fbx",
+    "Weapons/DMR/T_DMR_BC.png",
+    "Weapons/DMR/T_DMR_N.png",
+    "Weapons/DMR/T_DMR_ORM.png"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack",
+   "author": "Stein Games",
+   "license": "CC0-1.0",
+   "original": "M14"
+  },
+  {
+   "name": "Bolt",
+   "type": "weapon",
+   "files": [
+    "Weapons/Bolt/Bolt.fbx",
+    "Weapons/Bolt/T_Bolt_BC.png",
+    "Weapons/Bolt/T_Bolt_N.png",
+    "Weapons/Bolt/T_Bolt_ORM.png"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack",
+   "author": "Stein Games",
+   "license": "CC0-1.0",
+   "original": "M700"
+  },
+  {
+   "name": "LMG",
+   "type": "weapon",
+   "files": [
+    "Weapons/LMG/LMG.glb"
+   ],
+   "source": "https://polyyai.itch.io/3d-low-poly-guns-pack",
+   "author": "Polyy.AI (AI-assisted)",
+   "license": "CC0-1.0",
+   "original": "belt-fed LMG"
+  },
+  {
+   "name": "MP5",
+   "type": "weapon",
+   "files": [
+    "Weapons/MP5/MP5.fbx",
+    "Weapons/MP5/T_MP5_BC.png",
+    "Weapons/MP5/T_MP5_N.png",
+    "Weapons/MP5/T_MP5_ORM.png"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack",
+   "author": "Stein Games",
+   "license": "CC0-1.0",
+   "original": "MP5"
+  },
+  {
+   "name": "MP7",
+   "type": "weapon",
+   "files": [
+    "Weapons/MP7/MP7.glb"
+   ],
+   "source": "https://polyyai.itch.io/3d-low-poly-guns-pack",
+   "author": "Polyy.AI (AI-assisted)",
+   "license": "CC0-1.0",
+   "original": "compact SMG"
+  },
+  {
+   "name": "UMP",
+   "type": "weapon",
+   "files": [
+    "Weapons/UMP/UMP.fbx",
+    "Weapons/UMP/T_UMP_BC.png",
+    "Weapons/UMP/T_UMP_N.png",
+    "Weapons/UMP/T_UMP_ORM.png"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack",
+   "author": "Stein Games",
+   "license": "CC0-1.0",
+   "original": "MAC-10 (stand-in)"
+  },
+  {
+   "name": "Pump",
+   "type": "weapon",
+   "files": [
+    "Weapons/Pump/Pump.fbx",
+    "Weapons/Pump/T_Pump_BC.png",
+    "Weapons/Pump/T_Pump_N.png",
+    "Weapons/Pump/T_Pump_ORM.png"
+   ],
+   "source": "https://3dmodelscc0.itch.io/free-cc0-guns-explosives-pack",
+   "author": "3DModelsCC0",
+   "license": "CC0-1.0",
+   "original": "pump shotgun"
+  },
+  {
+   "name": "AutoShotgun",
+   "type": "weapon",
+   "files": [
+    "Weapons/AutoShotgun/AutoShotgun.glb"
+   ],
+   "source": "https://polyyai.itch.io/3d-low-poly-guns-pack-2",
+   "author": "Polyy.AI (AI-assisted)",
+   "license": "CC0-1.0",
+   "original": "semi-auto shotgun"
+  },
+  {
+   "name": "Glock",
+   "type": "weapon",
+   "files": [
+    "Weapons/Glock/Glock.glb"
+   ],
+   "source": "https://polyyai.itch.io/3d-low-poly-guns-pack",
+   "author": "Polyy.AI (AI-assisted)",
+   "license": "CC0-1.0",
+   "original": "polymer pistol"
+  },
+  {
+   "name": "USP",
+   "type": "weapon",
+   "files": [
+    "Weapons/USP/USP.fbx",
+    "Weapons/USP/T_USP_BC.png",
+    "Weapons/USP/T_USP_N.png",
+    "Weapons/USP/T_USP_ORM.png"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack",
+   "author": "Stein Games",
+   "license": "CC0-1.0",
+   "original": "1911 (stand-in)"
+  },
+  {
+   "name": "P226",
+   "type": "weapon",
+   "files": [
+    "Weapons/P226/P226.fbx",
+    "Weapons/P226/T_P226_BC.png",
+    "Weapons/P226/T_P226_N.png",
+    "Weapons/P226/T_P226_ORM.png"
+   ],
+   "source": "https://3dmodelscc0.itch.io/free-cc0-guns-explosives-pack",
+   "author": "3DModelsCC0",
+   "license": "CC0-1.0",
+   "original": "Makarov (stand-in)"
+  },
+  {
+   "name": "Deagle",
+   "type": "weapon",
+   "files": [
+    "Weapons/Deagle/Deagle.glb"
+   ],
+   "source": "https://polyyai.itch.io/3d-low-poly-guns-pack-2",
+   "author": "Polyy.AI (AI-assisted)",
+   "license": "CC0-1.0",
+   "original": "magnum pistol"
+  },
+  {
+   "name": "Grenade_Smoke",
+   "type": "weapon",
+   "files": [
+    "Weapons/Grenade_Smoke/Grenade_Smoke.fbx",
+    "Weapons/Grenade_Smoke/T_Grenade_Smoke_BC.png",
+    "Weapons/Grenade_Smoke/T_Grenade_Smoke_N.png",
+    "Weapons/Grenade_Smoke/T_Grenade_Smoke_ORM.png"
+   ],
+   "source": "https://3dmodelscc0.itch.io/free-cc0-guns-explosives-pack",
+   "author": "3DModelsCC0",
+   "license": "CC0-1.0",
+   "original": "smoke grenade"
+  },
+  {
+   "name": "Grenade_Flash",
+   "type": "weapon",
+   "files": [
+    "Weapons/Grenade_Flash/Grenade_Flash.fbx",
+    "Weapons/Grenade_Flash/T_Grenade_Flash_BC.png",
+    "Weapons/Grenade_Flash/T_Grenade_Flash_N.png",
+    "Weapons/Grenade_Flash/T_Grenade_Flash_ORM.png"
+   ],
+   "source": "https://3dmodelscc0.itch.io/free-cc0-guns-explosives-pack",
+   "author": "3DModelsCC0",
+   "license": "CC0-1.0",
+   "original": "flashbang"
+  },
+  {
+   "name": "Grenade_Frag",
+   "type": "weapon",
+   "files": [
+    "Weapons/Grenade_Frag/Grenade_Frag.fbx",
+    "Weapons/Grenade_Frag/T_Grenade_Frag_BC.png",
+    "Weapons/Grenade_Frag/T_Grenade_Frag_N.png",
+    "Weapons/Grenade_Frag/T_Grenade_Frag_ORM.png"
+   ],
+   "source": "https://3dmodelscc0.itch.io/free-cc0-guns-explosives-pack",
+   "author": "3DModelsCC0",
+   "license": "CC0-1.0",
+   "original": "frag grenade"
+  },
+  {
+   "name": "Charge",
+   "type": "weapon",
+   "files": [
+    "Weapons/Charge/Charge.fbx",
+    "Weapons/Charge/T_Charge_BC.png",
+    "Weapons/Charge/T_Charge_N.png",
+    "Weapons/Charge/T_Charge_ORM.png",
+    "Weapons/Charge/T_Charge_E.png"
+   ],
+   "source": "https://3dmodelscc0.itch.io/free-cc0-guns-explosives-pack",
+   "author": "3DModelsCC0",
+   "license": "CC0-1.0",
+   "original": "C4 demolition charge"
+  },
+  {
+   "name": "Quaternius accessories (scopes, silencers, grip, flashlight, bipod)",
+   "type": "attachment",
+   "files": [
+    "Weapons/Attachments/Bayonet.fbx",
+    "Weapons/Attachments/Bayonet_2.fbx",
+    "Weapons/Attachments/Bipod.fbx",
+    "Weapons/Attachments/Flashlight.fbx",
+    "Weapons/Attachments/Grip.fbx",
+    "Weapons/Attachments/Scope_1.fbx",
+    "Weapons/Attachments/Scope_2.fbx",
+    "Weapons/Attachments/Scope_3.fbx",
+    "Weapons/Attachments/Silencer_1.fbx",
+    "Weapons/Attachments/Silencer_2.fbx",
+    "Weapons/Attachments/Silencer_3.fbx",
+    "Weapons/Attachments/Silencer_Short.fbx",
+    "Weapons/Attachments/Silencer_long.fbx",
+    "Weapons/Attachments/Stock.fbx",
+    "Weapons/Attachments/Tripod.fbx"
+   ],
+   "source": "https://opengameart.org/content/low-poly-guns-pack",
+   "author": "Quaternius",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Soldier male/female + 31 animations (merged by Tools/blender/merge_character.py)",
+   "type": "character",
+   "files": [
+    "Characters/Soldier_Female.glb",
+    "Characters/Soldier_Male.glb"
+   ],
+   "source": "https://quaternius.itch.io/universal-base-characters",
+   "author": "Quaternius",
+   "license": "CC0-1.0",
+   "animations": "Quaternius Universal Animation Library 1+2 (CC0)"
+  },
+  {
+   "name": "AK gunshot",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/AK_Fire_01.wav",
+    "Audio/Weapons/AK_Fire_02.wav",
+    "Audio/Weapons/AK_Fire_03.wav",
+    "Audio/Weapons/AK_Fire_04.wav",
+    "Audio/Weapons/AK_Fire.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "M4 gunshot",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/M4_Fire_01.wav",
+    "Audio/Weapons/M4_Fire_02.wav",
+    "Audio/Weapons/M4_Fire_03.wav",
+    "Audio/Weapons/M4_Fire_04.wav",
+    "Audio/Weapons/M4_Fire.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "HK416 gunshot",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/HK416_Fire_01.wav",
+    "Audio/Weapons/HK416_Fire_02.wav",
+    "Audio/Weapons/HK416_Fire_03.wav",
+    "Audio/Weapons/HK416_Fire_04.wav",
+    "Audio/Weapons/HK416_Fire.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "DMR gunshot",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/DMR_Fire_01.wav",
+    "Audio/Weapons/DMR_Fire_02.wav",
+    "Audio/Weapons/DMR_Fire_03.wav",
+    "Audio/Weapons/DMR_Fire_04.wav",
+    "Audio/Weapons/DMR_Fire.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Bolt gunshot",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/Bolt_Fire_01.wav",
+    "Audio/Weapons/Bolt_Fire_02.wav",
+    "Audio/Weapons/Bolt_Fire_03.wav",
+    "Audio/Weapons/Bolt_Fire_04.wav",
+    "Audio/Weapons/Bolt_Fire.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "LMG gunshot",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/LMG_Fire_01.wav",
+    "Audio/Weapons/LMG_Fire_02.wav",
+    "Audio/Weapons/LMG_Fire_03.wav",
+    "Audio/Weapons/LMG_Fire_04.wav",
+    "Audio/Weapons/LMG_Fire.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "MP5 gunshot",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/MP5_Fire_01.wav",
+    "Audio/Weapons/MP5_Fire_02.wav",
+    "Audio/Weapons/MP5_Fire_03.wav",
+    "Audio/Weapons/MP5_Fire_04.wav",
+    "Audio/Weapons/MP5_Fire.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "MP7 gunshot",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/MP7_Fire_01.wav",
+    "Audio/Weapons/MP7_Fire_02.wav",
+    "Audio/Weapons/MP7_Fire_03.wav",
+    "Audio/Weapons/MP7_Fire_04.wav",
+    "Audio/Weapons/MP7_Fire.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "UMP gunshot",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/UMP_Fire_01.wav",
+    "Audio/Weapons/UMP_Fire_02.wav",
+    "Audio/Weapons/UMP_Fire_03.wav",
+    "Audio/Weapons/UMP_Fire_04.wav",
+    "Audio/Weapons/UMP_Fire.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Pump gunshot",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/Pump_Fire_01.wav",
+    "Audio/Weapons/Pump_Fire_02.wav",
+    "Audio/Weapons/Pump_Fire.wav"
+   ],
+   "source": "https://opengameart.org/content/the-free-firearm-sound-library",
+   "author": "The Free Firearm Sound Library",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "AutoShotgun gunshot",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/AutoShotgun_Fire_01.wav",
+    "Audio/Weapons/AutoShotgun_Fire_02.wav",
+    "Audio/Weapons/AutoShotgun_Fire.wav"
+   ],
+   "source": "https://opengameart.org/content/the-free-firearm-sound-library",
+   "author": "The Free Firearm Sound Library",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Glock gunshot",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/Glock_Fire_01.wav",
+    "Audio/Weapons/Glock_Fire_02.wav",
+    "Audio/Weapons/Glock_Fire_03.wav",
+    "Audio/Weapons/Glock_Fire_04.wav",
+    "Audio/Weapons/Glock_Fire.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "USP gunshot",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/USP_Fire_01.wav",
+    "Audio/Weapons/USP_Fire_02.wav",
+    "Audio/Weapons/USP_Fire_03.wav",
+    "Audio/Weapons/USP_Fire_04.wav",
+    "Audio/Weapons/USP_Fire.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "P226 gunshot",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/P226_Fire_01.wav",
+    "Audio/Weapons/P226_Fire_02.wav",
+    "Audio/Weapons/P226_Fire_03.wav",
+    "Audio/Weapons/P226_Fire_04.wav",
+    "Audio/Weapons/P226_Fire.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Deagle gunshot",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/Deagle_Fire_01.wav",
+    "Audio/Weapons/Deagle_Fire_02.wav",
+    "Audio/Weapons/Deagle_Fire_03.wav",
+    "Audio/Weapons/Deagle_Fire_04.wav",
+    "Audio/Weapons/Deagle_Fire.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "AK reload",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/AK_Reload.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "M4 reload",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/M4_Reload.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "HK416 reload",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/HK416_Reload.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "DMR reload",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/DMR_Reload.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Bolt reload",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/Bolt_Reload.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "LMG reload",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/LMG_Reload.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "MP5 reload",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/MP5_Reload.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "MP7 reload",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/MP7_Reload.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "UMP reload",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/UMP_Reload.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Pump reload",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/Pump_Reload.wav"
+   ],
+   "source": "https://opengameart.org/content/gun-reload-sounds",
+   "author": "OpenGameArt contributor",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "AutoShotgun reload",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/AutoShotgun_Reload.wav"
+   ],
+   "source": "https://opengameart.org/content/gun-reload-sounds",
+   "author": "OpenGameArt contributor",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Glock reload",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/Glock_Reload.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "USP reload",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/USP_Reload.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "P226 reload",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/P226_Reload.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Deagle reload",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/Deagle_Reload.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Footsteps Concrete",
+   "type": "sound",
+   "files": [
+    "Audio/Footsteps/Step_Concrete_01.wav",
+    "Audio/Footsteps/Step_Concrete_02.wav",
+    "Audio/Footsteps/Step_Concrete_03.wav",
+    "Audio/Footsteps/Step_Concrete_04.wav"
+   ],
+   "source": "https://kenney.nl/assets/impact-sounds",
+   "author": "Kenney",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Footsteps Wood",
+   "type": "sound",
+   "files": [
+    "Audio/Footsteps/Step_Wood_01.wav",
+    "Audio/Footsteps/Step_Wood_02.wav",
+    "Audio/Footsteps/Step_Wood_03.wav",
+    "Audio/Footsteps/Step_Wood_04.wav"
+   ],
+   "source": "https://kenney.nl/assets/impact-sounds",
+   "author": "Kenney",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Footsteps Grass",
+   "type": "sound",
+   "files": [
+    "Audio/Footsteps/Step_Grass_01.wav",
+    "Audio/Footsteps/Step_Grass_02.wav",
+    "Audio/Footsteps/Step_Grass_03.wav",
+    "Audio/Footsteps/Step_Grass_04.wav"
+   ],
+   "source": "https://kenney.nl/assets/impact-sounds",
+   "author": "Kenney",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Footsteps Carpet",
+   "type": "sound",
+   "files": [
+    "Audio/Footsteps/Step_Carpet_01.wav",
+    "Audio/Footsteps/Step_Carpet_02.wav",
+    "Audio/Footsteps/Step_Carpet_03.wav",
+    "Audio/Footsteps/Step_Carpet_04.wav"
+   ],
+   "source": "https://kenney.nl/assets/impact-sounds",
+   "author": "Kenney",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Footsteps Gravel",
+   "type": "sound",
+   "files": [
+    "Audio/Footsteps/Step_Gravel_01.wav",
+    "Audio/Footsteps/Step_Gravel_02.wav",
+    "Audio/Footsteps/Step_Gravel_03.wav",
+    "Audio/Footsteps/Step_Gravel_04.wav"
+   ],
+   "source": "https://kenney.nl/assets/impact-sounds",
+   "author": "Kenney",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Footsteps Metal",
+   "type": "sound",
+   "files": [
+    "Audio/Footsteps/Step_Metal_01.wav",
+    "Audio/Footsteps/Step_Metal_02.wav",
+    "Audio/Footsteps/Step_Metal_03.wav",
+    "Audio/Footsteps/Step_Metal_04.wav"
+   ],
+   "source": "https://kenney.nl/assets/impact-sounds",
+   "author": "Kenney",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Bullet impact Concrete",
+   "type": "sound",
+   "files": [
+    "Audio/Impacts/Impact_Concrete_01.wav",
+    "Audio/Impacts/Impact_Concrete_02.wav",
+    "Audio/Impacts/Impact_Concrete_03.wav",
+    "Audio/Impacts/Impact_Concrete.wav"
+   ],
+   "source": "https://kenney.nl/assets/impact-sounds",
+   "author": "Kenney",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Bullet impact Metal",
+   "type": "sound",
+   "files": [
+    "Audio/Impacts/Impact_Metal_01.wav",
+    "Audio/Impacts/Impact_Metal_02.wav",
+    "Audio/Impacts/Impact_Metal_03.wav",
+    "Audio/Impacts/Impact_Metal.wav"
+   ],
+   "source": "https://kenney.nl/assets/impact-sounds",
+   "author": "Kenney",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Bullet impact Wood",
+   "type": "sound",
+   "files": [
+    "Audio/Impacts/Impact_Wood_01.wav",
+    "Audio/Impacts/Impact_Wood_02.wav",
+    "Audio/Impacts/Impact_Wood_03.wav",
+    "Audio/Impacts/Impact_Wood.wav"
+   ],
+   "source": "https://kenney.nl/assets/impact-sounds",
+   "author": "Kenney",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Bullet impact Flesh",
+   "type": "sound",
+   "files": [
+    "Audio/Impacts/Impact_Flesh_01.wav",
+    "Audio/Impacts/Impact_Flesh_02.wav",
+    "Audio/Impacts/Impact_Flesh_03.wav",
+    "Audio/Impacts/Impact_Flesh.wav"
+   ],
+   "source": "https://kenney.nl/assets/impact-sounds",
+   "author": "Kenney",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Bullet impact Glass",
+   "type": "sound",
+   "files": [
+    "Audio/Impacts/Impact_Glass_01.wav",
+    "Audio/Impacts/Impact_Glass_02.wav",
+    "Audio/Impacts/Impact_Glass_03.wav",
+    "Audio/Impacts/Impact_Glass.wav"
+   ],
+   "source": "https://kenney.nl/assets/impact-sounds",
+   "author": "Kenney",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Shell casings",
+   "type": "sound",
+   "files": [
+    "Audio/Weapons/Shell_01.wav",
+    "Audio/Weapons/Shell_02.wav",
+    "Audio/Weapons/Shell_03.wav"
+   ],
+   "source": "https://stein-indie.itch.io/classic-weapons-pack (audio.zip)",
+   "author": "Stein Games",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Explosions",
+   "type": "sound",
+   "files": [
+    "Audio/Grenades/Explosion.wav",
+    "Audio/Grenades/Explosion_Low.wav"
+   ],
+   "source": "https://kenney.nl/assets/sci-fi-sounds",
+   "author": "Kenney",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Flashbang, smoke hiss, charge beep",
+   "type": "sound",
+   "files": [
+    "Audio/Grenades/Flashbang.wav",
+    "Audio/Grenades/SmokeHiss.wav",
+    "Audio/UI/BombBeep.wav"
+   ],
+   "source": "generated by Tools/curate_assets.py",
+   "author": "NO SECOND CHANCE",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Grenade pin",
+   "type": "sound",
+   "files": [
+    "Audio/Grenades/PinPull.wav"
+   ],
+   "source": "https://kenney.nl/assets/impact-sounds",
+   "author": "Kenney",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "UI sounds",
+   "type": "sound",
+   "files": [
+    "Audio/UI/UI_Click.wav",
+    "Audio/UI/UI_Hover.wav",
+    "Audio/UI/UI_Buy.wav",
+    "Audio/UI/UI_Deny.wav",
+    "Audio/UI/UI_RoundStart.wav",
+    "Audio/UI/UI_RoundWin.wav",
+    "Audio/UI/UI_RoundLoss.wav",
+    "Audio/UI/UI_Downed.wav",
+    "Audio/UI/UI_Revived.wav",
+    "Audio/UI/UI_Hitmarker.wav"
+   ],
+   "source": "https://kenney.nl/assets/interface-sounds",
+   "author": "Kenney",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Particle textures (muzzle flash, smoke, sparks, scorch, tracers)",
+   "type": "texture",
+   "files": [
+    "FX/T_muzzle_01.png",
+    "FX/T_muzzle_02.png",
+    "FX/T_muzzle_03.png",
+    "FX/T_muzzle_04.png",
+    "FX/T_muzzle_05.png",
+    "FX/T_smoke_01.png",
+    "FX/T_smoke_02.png",
+    "FX/T_smoke_03.png",
+    "FX/T_smoke_04.png",
+    "FX/T_smoke_05.png",
+    "FX/T_smoke_06.png",
+    "FX/T_smoke_07.png",
+    "FX/T_smoke_08.png",
+    "FX/T_smoke_09.png",
+    "FX/T_smoke_10.png",
+    "FX/T_spark_01.png",
+    "FX/T_spark_02.png",
+    "FX/T_spark_03.png",
+    "FX/T_spark_04.png",
+    "FX/T_spark_05.png",
+    "FX/T_spark_06.png",
+    "FX/T_spark_07.png",
+    "FX/T_scorch_01.png",
+    "FX/T_scorch_02.png",
+    "FX/T_scorch_03.png",
+    "FX/T_trace_01.png",
+    "FX/T_trace_02.png",
+    "FX/T_trace_03.png",
+    "FX/T_trace_04.png",
+    "FX/T_trace_05.png",
+    "FX/T_trace_06.png",
+    "FX/T_trace_07.png",
+    "FX/T_flare_01.png",
+    "FX/T_circle_05.png",
+    "FX/T_dirt_01.png",
+    "FX/T_dirt_02.png",
+    "FX/T_dirt_03.png",
+    "FX/T_fire_01.png",
+    "FX/T_fire_02.png"
+   ],
+   "source": "https://kenney.nl/assets/particle-pack",
+   "author": "Kenney",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Smoke puff textures",
+   "type": "texture",
+   "files": [
+    "FX/T_SmokePuff_blackSmoke00.png",
+    "FX/T_SmokePuff_blackSmoke01.png",
+    "FX/T_SmokePuff_blackSmoke02.png",
+    "FX/T_SmokePuff_blackSmoke03.png",
+    "FX/T_SmokePuff_blackSmoke04.png",
+    "FX/T_SmokePuff_blackSmoke05.png",
+    "FX/T_SmokePuff_blackSmoke06.png",
+    "FX/T_SmokePuff_blackSmoke07.png",
+    "FX/T_SmokePuff_blackSmoke08.png",
+    "FX/T_SmokePuff_blackSmoke09.png",
+    "FX/T_SmokePuff_blackSmoke10.png",
+    "FX/T_SmokePuff_blackSmoke11.png",
+    "FX/T_SmokePuff_blackSmoke12.png",
+    "FX/T_SmokePuff_blackSmoke13.png",
+    "FX/T_SmokePuff_blackSmoke14.png",
+    "FX/T_SmokePuff_blackSmoke15.png",
+    "FX/T_SmokePuff_blackSmoke16.png",
+    "FX/T_SmokePuff_blackSmoke17.png",
+    "FX/T_SmokePuff_blackSmoke18.png",
+    "FX/T_SmokePuff_blackSmoke19.png",
+    "FX/T_SmokePuff_blackSmoke20.png",
+    "FX/T_SmokePuff_blackSmoke21.png",
+    "FX/T_SmokePuff_blackSmoke22.png",
+    "FX/T_SmokePuff_blackSmoke23.png"
+   ],
+   "source": "https://kenney.nl/assets/smoke-particles",
+   "author": "Kenney",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Bullet hole + blood decals",
+   "type": "texture",
+   "files": [
+    "Decals/T_BulletHole_01.png",
+    "Decals/T_BulletHole_02.png",
+    "Decals/T_BulletHole_03.png",
+    "Decals/T_BulletHole_04.png",
+    "Decals/T_Blood_01.png",
+    "Decals/T_Blood_02.png",
+    "Decals/T_Blood_03.png",
+    "Decals/T_Blood_04.png"
+   ],
+   "source": "generated by Tools/curate_assets.py",
+   "author": "NO SECOND CHANCE",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Rajdhani font",
+   "type": "font",
+   "files": [
+    "Fonts/Rajdhani-Regular.ttf",
+    "Fonts/Rajdhani-Bold.ttf",
+    "Fonts/Rajdhani-SemiBold.ttf",
+    "Fonts/OFL.txt"
+   ],
+   "source": "https://fonts.google.com/specimen/Rajdhani",
+   "author": "Indian Type Foundry",
+   "license": "OFL-1.1"
+  },
+  {
+   "name": "Barrel_01",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/Barrel_01/Barrel_01.gltf"
+   ],
+   "source": "https://polyhaven.com/a/Barrel_01",
+   "author": "Jorge Camacho",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Barrel 02",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/Barrel_02/Barrel_02.gltf"
+   ],
+   "source": "https://polyhaven.com/a/Barrel_02",
+   "author": "Jorge Camacho",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Barrel 03",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/barrel_03/barrel_03.gltf"
+   ],
+   "source": "https://polyhaven.com/a/barrel_03",
+   "author": "Serhii Khromov",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Wooden Barrels 01",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/wooden_barrels_01/wooden_barrels_01.gltf"
+   ],
+   "source": "https://polyhaven.com/a/wooden_barrels_01",
+   "author": "James Ray Cock",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Ammo Box",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/ammo_box/ammo_box.gltf"
+   ],
+   "source": "https://polyhaven.com/a/ammo_box",
+   "author": "DanKit",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Cardboard Box 01",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/cardboard_box_01/cardboard_box_01.gltf"
+   ],
+   "source": "https://polyhaven.com/a/cardboard_box_01",
+   "author": "Rahul Chaudhary",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Concrete Road Barrier",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/concrete_road_barrier/concrete_road_barrier.gltf"
+   ],
+   "source": "https://polyhaven.com/a/concrete_road_barrier",
+   "author": "Amal Kumar",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Concrete Road Barrier 02",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/concrete_road_barrier_02/concrete_road_barrier_02.gltf"
+   ],
+   "source": "https://polyhaven.com/a/concrete_road_barrier_02",
+   "author": "Amal Kumar",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Hand Truck",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/hand_truck/hand_truck.gltf"
+   ],
+   "source": "https://polyhaven.com/a/hand_truck",
+   "author": "Mutanzom3D",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Hanging Industrial Lamp",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/hanging_industrial_lamp/hanging_industrial_lamp.gltf"
+   ],
+   "source": "https://polyhaven.com/a/hanging_industrial_lamp",
+   "author": "Kuutti Siitonen",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Industrial Storage Cart",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/industrial_storage_cart/industrial_storage_cart.gltf"
+   ],
+   "source": "https://polyhaven.com/a/industrial_storage_cart",
+   "author": "Jule Bielitz",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Industrial Plastic Container",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/industrial_pastic_container/industrial_pastic_container.gltf"
+   ],
+   "source": "https://polyhaven.com/a/industrial_pastic_container",
+   "author": "Galo Benivegna",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Industrial Pipe Lamp",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/industrial_pipe_lamp/industrial_pipe_lamp.gltf"
+   ],
+   "source": "https://polyhaven.com/a/industrial_pipe_lamp",
+   "author": "Mateusz Sadek",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Industrial Wall Lamp",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/industrial_wall_lamp/industrial_wall_lamp.gltf"
+   ],
+   "source": "https://polyhaven.com/a/industrial_wall_lamp",
+   "author": "Kuutti Siitonen",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Industrial Caged Sconce",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/industrial_caged_sconce/industrial_caged_sconce.gltf"
+   ],
+   "source": "https://polyhaven.com/a/industrial_caged_sconce",
+   "author": "Ulan Cabanilla",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Industrial Wall Sconce",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/industrial_wall_sconce/industrial_wall_sconce.gltf"
+   ],
+   "source": "https://polyhaven.com/a/industrial_wall_sconce",
+   "author": "Ulan Cabanilla",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Caged Hanging Light",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/caged_hanging_light/caged_hanging_light.gltf"
+   ],
+   "source": "https://polyhaven.com/a/caged_hanging_light",
+   "author": "Ulan Cabanilla",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Korean Fire Extinguisher 01",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/korean_fire_extinguisher_01/korean_fire_extinguisher_01.gltf"
+   ],
+   "source": "https://polyhaven.com/a/korean_fire_extinguisher_01",
+   "author": "UM JOORIN",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Medical Box",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/medical_box/medical_box.gltf"
+   ],
+   "source": "https://polyhaven.com/a/medical_box",
+   "author": "Ulan Cabanilla",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Medical Tape",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/medical_tape/medical_tape.gltf"
+   ],
+   "source": "https://polyhaven.com/a/medical_tape",
+   "author": "Miroslav Turura",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Metal Jerrycan",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/metal_jerrycan/metal_jerrycan.gltf"
+   ],
+   "source": "https://polyhaven.com/a/metal_jerrycan",
+   "author": "Sean Buckley",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Metal Jerrycan Green",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/metal_jerrycan_green/metal_jerrycan_green.gltf"
+   ],
+   "source": "https://polyhaven.com/a/metal_jerrycan_green",
+   "author": "Ulan Cabanilla",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Plastic Jerrycan",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/plastic_jerrycan/plastic_jerrycan.gltf"
+   ],
+   "source": "https://polyhaven.com/a/plastic_jerrycan",
+   "author": "Ulan Cabanilla",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Metal Toolbox",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/metal_toolbox/metal_toolbox.gltf"
+   ],
+   "source": "https://polyhaven.com/a/metal_toolbox",
+   "author": "Mateusz Sadek",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Metal Tool Chest",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/metal_tool_chest/metal_tool_chest.gltf"
+   ],
+   "source": "https://polyhaven.com/a/metal_tool_chest",
+   "author": "Yann Kervran, John Hutcheson",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Tool Cart",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/tool_cart/tool_cart.gltf"
+   ],
+   "source": "https://polyhaven.com/a/tool_cart",
+   "author": "Savva Zakharov",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Mounted Fluorescent Lights",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/mounted_fluorescent_lights/mounted_fluorescent_lights.gltf"
+   ],
+   "source": "https://polyhaven.com/a/mounted_fluorescent_lights",
+   "author": "Ulan Cabanilla",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Old Tyre",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/old_tyre/old_tyre.gltf"
+   ],
+   "source": "https://polyhaven.com/a/old_tyre",
+   "author": "MP",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Plastic Crate 01",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/plastic_crate_01/plastic_crate_01.gltf"
+   ],
+   "source": "https://polyhaven.com/a/plastic_crate_01",
+   "author": "PierreB3D",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Plastic Crate 02",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/plastic_crate_02/plastic_crate_02.gltf"
+   ],
+   "source": "https://polyhaven.com/a/plastic_crate_02",
+   "author": "Fabi_G",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Plastic Crate 03",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/plastic_crate_03/plastic_crate_03.gltf"
+   ],
+   "source": "https://polyhaven.com/a/plastic_crate_03",
+   "author": "Pacific Penguin",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Portable Generator",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/portable_generator/portable_generator.gltf"
+   ],
+   "source": "https://polyhaven.com/a/portable_generator",
+   "author": "James Ray Cock",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Propane Tank",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/propane_tank/propane_tank.gltf"
+   ],
+   "source": "https://polyhaven.com/a/propane_tank",
+   "author": "Slinc",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Small Lpg Tank",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/small_lpg_tank/small_lpg_tank.gltf"
+   ],
+   "source": "https://polyhaven.com/a/small_lpg_tank",
+   "author": "Ulan Cabanilla",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Steel Frame Shelves 01",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/steel_frame_shelves_01/steel_frame_shelves_01.gltf"
+   ],
+   "source": "https://polyhaven.com/a/steel_frame_shelves_01",
+   "author": "James Ray Cock",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Steel Frame Shelves 02",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/steel_frame_shelves_02/steel_frame_shelves_02.gltf"
+   ],
+   "source": "https://polyhaven.com/a/steel_frame_shelves_02",
+   "author": "James Ray Cock",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Steel Frame Shelves 03",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/steel_frame_shelves_03/steel_frame_shelves_03.gltf"
+   ],
+   "source": "https://polyhaven.com/a/steel_frame_shelves_03",
+   "author": "Ulan Cabanilla",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Wooden Crate 01",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/wooden_crate_01/wooden_crate_01.gltf"
+   ],
+   "source": "https://polyhaven.com/a/wooden_crate_01",
+   "author": "James Ray Cock",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Wooden Crate 02",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/wooden_crate_02/wooden_crate_02.gltf"
+   ],
+   "source": "https://polyhaven.com/a/wooden_crate_02",
+   "author": "James Ray Cock, Jurita Burger",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Wooden Military Crate",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/wooden_military_crate/wooden_military_crate.gltf"
+   ],
+   "source": "https://polyhaven.com/a/wooden_military_crate",
+   "author": "Prabhjinder Singh",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Old Military Crate",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/old_military_crate/old_military_crate.gltf"
+   ],
+   "source": "https://polyhaven.com/a/old_military_crate",
+   "author": "Jack Mava",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Old Military Compressor",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/old_military_compressor/old_military_compressor.gltf"
+   ],
+   "source": "https://polyhaven.com/a/old_military_compressor",
+   "author": "Brian Speight",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Worn Metal Rack",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/worn_metal_rack/worn_metal_rack.gltf"
+   ],
+   "source": "https://polyhaven.com/a/worn_metal_rack",
+   "author": "Luca B",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Security Camera 01",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/security_camera_01/security_camera_01.gltf"
+   ],
+   "source": "https://polyhaven.com/a/security_camera_01",
+   "author": "Alexander Otterbeck, Yann Kervran",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Security Camera 02",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/security_camera_02/security_camera_02.gltf"
+   ],
+   "source": "https://polyhaven.com/a/security_camera_02",
+   "author": "Garrison Gager, Yann Kervran",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Security Light",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/security_light/security_light.gltf"
+   ],
+   "source": "https://polyhaven.com/a/security_light",
+   "author": "Maximilian Schuster",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Flood Lights",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/flood_lights/flood_lights.gltf"
+   ],
+   "source": "https://polyhaven.com/a/flood_lights",
+   "author": "James Ray Cock",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Portable Searchlight",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/portable_searchlight/portable_searchlight.gltf"
+   ],
+   "source": "https://polyhaven.com/a/portable_searchlight",
+   "author": "Elijah Cragg",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Power Box 01",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/power_box_01/power_box_01.gltf"
+   ],
+   "source": "https://polyhaven.com/a/power_box_01",
+   "author": "Rico Cilliers, Yann Kervran",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Utility Box 01",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/utility_box_01/utility_box_01.gltf"
+   ],
+   "source": "https://polyhaven.com/a/utility_box_01",
+   "author": "James Ray Cock",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Utility Box 02",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/utility_box_02/utility_box_02.gltf"
+   ],
+   "source": "https://polyhaven.com/a/utility_box_02",
+   "author": "James Ray Cock",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Fire Alarm",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/fire_alarm/fire_alarm.gltf"
+   ],
+   "source": "https://polyhaven.com/a/fire_alarm",
+   "author": "Slinc",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Fire Hydrant",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/fire_hydrant/fire_hydrant.gltf"
+   ],
+   "source": "https://polyhaven.com/a/fire_hydrant",
+   "author": "Gon\u00e7alo Fel\u00edcio",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Exterior Aircon Unit",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/exterior_aircon_unit/exterior_aircon_unit.gltf"
+   ],
+   "source": "https://polyhaven.com/a/exterior_aircon_unit",
+   "author": "Monsta3D",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Modular Airduct Circular 01",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/modular_airduct_circular_01/modular_airduct_circular_01.gltf"
+   ],
+   "source": "https://polyhaven.com/a/modular_airduct_circular_01",
+   "author": "Riley Queen",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Modular Airduct Rectangular 01",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/modular_airduct_rectangular_01/modular_airduct_rectangular_01.gltf"
+   ],
+   "source": "https://polyhaven.com/a/modular_airduct_rectangular_01",
+   "author": "James Ray Cock",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Modular Chainlink Fence",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/modular_chainlink_fence/modular_chainlink_fence.gltf"
+   ],
+   "source": "https://polyhaven.com/a/modular_chainlink_fence",
+   "author": "James Ray Cock, Amal Kumar",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Modular Electric Cables",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/modular_electric_cables/modular_electric_cables.gltf"
+   ],
+   "source": "https://polyhaven.com/a/modular_electric_cables",
+   "author": "Kuutti Siitonen",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Modular Factory Facade",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/modular_factory_facade/modular_factory_facade.gltf"
+   ],
+   "source": "https://polyhaven.com/a/modular_factory_facade",
+   "author": "James Ray Cock",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Modular Fire Escape",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/modular_fire_escape/modular_fire_escape.gltf"
+   ],
+   "source": "https://polyhaven.com/a/modular_fire_escape",
+   "author": "Juniix",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Modular Industrial Pipes 01",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/modular_industrial_pipes_01/modular_industrial_pipes_01.gltf"
+   ],
+   "source": "https://polyhaven.com/a/modular_industrial_pipes_01",
+   "author": "Jorge Camacho",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Modular Pipes",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/modular_pipes/modular_pipes.gltf"
+   ],
+   "source": "https://polyhaven.com/a/modular_pipes",
+   "author": "Kuutti Siitonen",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Modular Metal Gutter",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/modular_metal_gutter/modular_metal_gutter.gltf"
+   ],
+   "source": "https://polyhaven.com/a/modular_metal_gutter",
+   "author": "Maxim Domnin",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Rollershutter Door",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/rollershutter_door/rollershutter_door.gltf"
+   ],
+   "source": "https://polyhaven.com/a/rollershutter_door",
+   "author": "MP",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Rollershutter Window 01",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/rollershutter_window_01/rollershutter_window_01.gltf"
+   ],
+   "source": "https://polyhaven.com/a/rollershutter_window_01",
+   "author": "MP",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Overhead Crane",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/overhead_crane/overhead_crane.gltf"
+   ],
+   "source": "https://polyhaven.com/a/overhead_crane",
+   "author": "Timothy3D",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Cement Bag",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/cement_bag/cement_bag.gltf"
+   ],
+   "source": "https://polyhaven.com/a/cement_bag",
+   "author": "PierreB3D",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Trashbag",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/trashbag/trashbag.gltf"
+   ],
+   "source": "https://polyhaven.com/a/trashbag",
+   "author": "Benny Weimer",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Metal Trash Can",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/metal_trash_can/metal_trash_can.gltf"
+   ],
+   "source": "https://polyhaven.com/a/metal_trash_can",
+   "author": "GurJas Studios",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Wooden Ladder",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/wooden_ladder/wooden_ladder.gltf"
+   ],
+   "source": "https://polyhaven.com/a/wooden_ladder",
+   "author": "Miroslav Turura",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Ladder Sectioned 01",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/ladder_sectioned_01/ladder_sectioned_01.gltf"
+   ],
+   "source": "https://polyhaven.com/a/ladder_sectioned_01",
+   "author": "MP",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Metal Office Desk",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/metal_office_desk/metal_office_desk.gltf"
+   ],
+   "source": "https://polyhaven.com/a/metal_office_desk",
+   "author": "Ulan Cabanilla",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Metal Stool 01",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/metal_stool_01/metal_stool_01.gltf"
+   ],
+   "source": "https://polyhaven.com/a/metal_stool_01",
+   "author": "Ulan Cabanilla",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Drawer Cabinet",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/drawer_cabinet/drawer_cabinet.gltf"
+   ],
+   "source": "https://polyhaven.com/a/drawer_cabinet",
+   "author": "Ulan Cabanilla",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Clipboard",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/clipboard/clipboard.gltf"
+   ],
+   "source": "https://polyhaven.com/a/clipboard",
+   "author": "ProgrammerOnCoffee",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Crowbar 01",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/crowbar_01/crowbar_01.gltf"
+   ],
+   "source": "https://polyhaven.com/a/crowbar_01",
+   "author": "Alexander Otterbeck",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Sledgehammer 01",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/sledgehammer_01/sledgehammer_01.gltf"
+   ],
+   "source": "https://polyhaven.com/a/sledgehammer_01",
+   "author": "Dylan Guzman",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Portable Welding Cart",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/portable_welding_cart/portable_welding_cart.gltf"
+   ],
+   "source": "https://polyhaven.com/a/portable_welding_cart",
+   "author": "Georgii Gorbunov",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Wet Floor Sign 01",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/WetFloorSign_01/WetFloorSign_01.gltf"
+   ],
+   "source": "https://polyhaven.com/a/WetFloorSign_01",
+   "author": "Fran Calvente",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Water Manhole Cover",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/water_manhole_cover/water_manhole_cover.gltf"
+   ],
+   "source": "https://polyhaven.com/a/water_manhole_cover",
+   "author": "Raunox",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Lifebuoy",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/lifebuoy/lifebuoy.gltf"
+   ],
+   "source": "https://polyhaven.com/a/lifebuoy",
+   "author": "Hank Kaamura",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Life Jacket",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/life_jacket/life_jacket.gltf"
+   ],
+   "source": "https://polyhaven.com/a/life_jacket",
+   "author": "PierreB3D",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Ocean Buoy",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/ocean_buoy/ocean_buoy.gltf"
+   ],
+   "source": "https://polyhaven.com/a/ocean_buoy",
+   "author": "Mateusz Sadek",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Modular Wooden Pier",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/modular_wooden_pier/modular_wooden_pier.gltf"
+   ],
+   "source": "https://polyhaven.com/a/modular_wooden_pier",
+   "author": "Rico Cilliers",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Covered Car",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/covered_car/covered_car.gltf"
+   ],
+   "source": "https://polyhaven.com/a/covered_car",
+   "author": "MP",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Bolt Action Rifle 7.62",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/bolt_action_rifle_7_62/bolt_action_rifle_7_62.gltf"
+   ],
+   "source": "https://polyhaven.com/a/bolt_action_rifle_7_62",
+   "author": "Mateusz Sadek",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Service Pistol",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/service_pistol/service_pistol.gltf"
+   ],
+   "source": "https://polyhaven.com/a/service_pistol",
+   "author": "Mateusz Sadek",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Stick Grenade",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/stick_grenade/stick_grenade.gltf"
+   ],
+   "source": "https://polyhaven.com/a/stick_grenade",
+   "author": "singaii",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Old Gas Mask",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/old_gas_mask/old_gas_mask.gltf"
+   ],
+   "source": "https://polyhaven.com/a/old_gas_mask",
+   "author": "Micha\u0142 Wi\u015bniewski",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Signal Flashlight",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/signal_flashlight/signal_flashlight.gltf"
+   ],
+   "source": "https://polyhaven.com/a/signal_flashlight",
+   "author": "Ji\u0159\u00ed Pt\u00e1\u010dek",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Plastic Torch 6V",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/pastic_torch_6v/pastic_torch_6v.gltf"
+   ],
+   "source": "https://polyhaven.com/a/pastic_torch_6v",
+   "author": "James Cocks",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Binoculars",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/binoculars/binoculars.gltf"
+   ],
+   "source": "https://polyhaven.com/a/binoculars",
+   "author": "Derek Wight",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Vintage Radio Transceiver",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/vintage_radio_transceiver/vintage_radio_transceiver.gltf"
+   ],
+   "source": "https://polyhaven.com/a/vintage_radio_transceiver",
+   "author": "Mateusz Sadek",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Circuit Board",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/circuit_board/circuit_board.gltf"
+   ],
+   "source": "https://polyhaven.com/a/circuit_board",
+   "author": "Benny Weimer",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Long Life Food",
+   "type": "model",
+   "files": [
+    "Props/PolyHaven/long_life_food/long_life_food.gltf"
+   ],
+   "source": "https://polyhaven.com/a/long_life_food",
+   "author": "Mia Pecina Zorko",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Concrete Floor Worn 001",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/concrete_floor_worn_001/concrete_floor_worn_001_diff_2k.jpg",
+    "Textures/PolyHaven/concrete_floor_worn_001/concrete_floor_worn_001_nor_gl_2k.jpg",
+    "Textures/PolyHaven/concrete_floor_worn_001/concrete_floor_worn_001_arm_2k.jpg",
+    "Textures/PolyHaven/concrete_floor_worn_001/concrete_floor_worn_001_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/concrete_floor_worn_001",
+   "author": "Dimitrios Savva, Rico Cilliers",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Corrugated Iron 02",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/corrugated_iron_02/corrugated_iron_02_diff_2k.jpg",
+    "Textures/PolyHaven/corrugated_iron_02/corrugated_iron_02_nor_gl_2k.jpg",
+    "Textures/PolyHaven/corrugated_iron_02/corrugated_iron_02_arm_2k.jpg",
+    "Textures/PolyHaven/corrugated_iron_02/corrugated_iron_02_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/corrugated_iron_02",
+   "author": "Jenelle van Heerden, Sergej Majboroda",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Box Profile Metal Sheet",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/box_profile_metal_sheet/box_profile_metal_sheet_diff_2k.jpg",
+    "Textures/PolyHaven/box_profile_metal_sheet/box_profile_metal_sheet_nor_gl_2k.jpg",
+    "Textures/PolyHaven/box_profile_metal_sheet/box_profile_metal_sheet_arm_2k.jpg",
+    "Textures/PolyHaven/box_profile_metal_sheet/box_profile_metal_sheet_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/box_profile_metal_sheet",
+   "author": "Amal Kumar",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Concrete Wall 006",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/concrete_wall_006/concrete_wall_006_diff_2k.jpg",
+    "Textures/PolyHaven/concrete_wall_006/concrete_wall_006_nor_gl_2k.jpg",
+    "Textures/PolyHaven/concrete_wall_006/concrete_wall_006_arm_2k.jpg",
+    "Textures/PolyHaven/concrete_wall_006/concrete_wall_006_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/concrete_wall_006",
+   "author": "Dario Barresi, Charlotte Baglioni",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Metal Plate",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/metal_plate/metal_plate_diff_2k.jpg",
+    "Textures/PolyHaven/metal_plate/metal_plate_nor_gl_2k.jpg",
+    "Textures/PolyHaven/metal_plate/metal_plate_arm_2k.jpg",
+    "Textures/PolyHaven/metal_plate/metal_plate_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/metal_plate",
+   "author": "Rob Tuytel",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Painted Metal Shutter",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/painted_metal_shutter/painted_metal_shutter_diff_2k.jpg",
+    "Textures/PolyHaven/painted_metal_shutter/painted_metal_shutter_nor_gl_2k.jpg",
+    "Textures/PolyHaven/painted_metal_shutter/painted_metal_shutter_arm_2k.jpg",
+    "Textures/PolyHaven/painted_metal_shutter/painted_metal_shutter_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/painted_metal_shutter",
+   "author": "Dario Barresi, Rico Cilliers, Charlotte Baglioni",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Rusty Metal 02",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/rusty_metal_02/rusty_metal_02_diff_2k.jpg",
+    "Textures/PolyHaven/rusty_metal_02/rusty_metal_02_nor_gl_2k.jpg",
+    "Textures/PolyHaven/rusty_metal_02/rusty_metal_02_arm_2k.jpg",
+    "Textures/PolyHaven/rusty_metal_02/rusty_metal_02_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/rusty_metal_02",
+   "author": "Rob Tuytel",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Denim Fabric",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/denim_fabric/denim_fabric_diff_2k.jpg",
+    "Textures/PolyHaven/denim_fabric/denim_fabric_nor_gl_2k.jpg",
+    "Textures/PolyHaven/denim_fabric/denim_fabric_arm_2k.jpg",
+    "Textures/PolyHaven/denim_fabric/denim_fabric_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/denim_fabric",
+   "author": "Rob Tuytel",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Hangar Concrete Floor",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/hangar_concrete_floor/hangar_concrete_floor_diff_2k.jpg",
+    "Textures/PolyHaven/hangar_concrete_floor/hangar_concrete_floor_nor_gl_2k.jpg",
+    "Textures/PolyHaven/hangar_concrete_floor/hangar_concrete_floor_arm_2k.jpg",
+    "Textures/PolyHaven/hangar_concrete_floor/hangar_concrete_floor_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/hangar_concrete_floor",
+   "author": "Dimitrios Savva",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Garage Floor",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/garage_floor/garage_floor_diff_2k.jpg",
+    "Textures/PolyHaven/garage_floor/garage_floor_nor_gl_2k.jpg",
+    "Textures/PolyHaven/garage_floor/garage_floor_arm_2k.jpg",
+    "Textures/PolyHaven/garage_floor/garage_floor_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/garage_floor",
+   "author": "Jenelle van Heerden",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Concrete Floor Painted",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/concrete_floor_painted/concrete_floor_painted_diff_2k.jpg",
+    "Textures/PolyHaven/concrete_floor_painted/concrete_floor_painted_nor_gl_2k.jpg",
+    "Textures/PolyHaven/concrete_floor_painted/concrete_floor_painted_arm_2k.jpg",
+    "Textures/PolyHaven/concrete_floor_painted/concrete_floor_painted_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/concrete_floor_painted",
+   "author": "Rob Tuytel",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Anti Slip Concrete",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/anti_slip_concrete/anti_slip_concrete_diff_2k.jpg",
+    "Textures/PolyHaven/anti_slip_concrete/anti_slip_concrete_nor_gl_2k.jpg",
+    "Textures/PolyHaven/anti_slip_concrete/anti_slip_concrete_arm_2k.jpg",
+    "Textures/PolyHaven/anti_slip_concrete/anti_slip_concrete_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/anti_slip_concrete",
+   "author": "Charlotte Baglioni",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Factory Wall",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/factory_wall/factory_wall_diff_2k.jpg",
+    "Textures/PolyHaven/factory_wall/factory_wall_nor_gl_2k.jpg",
+    "Textures/PolyHaven/factory_wall/factory_wall_arm_2k.jpg",
+    "Textures/PolyHaven/factory_wall/factory_wall_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/factory_wall",
+   "author": "Rob Tuytel",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Precast Concrete Wall",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/precast_concrete_wall/precast_concrete_wall_diff_2k.jpg",
+    "Textures/PolyHaven/precast_concrete_wall/precast_concrete_wall_nor_gl_2k.jpg",
+    "Textures/PolyHaven/precast_concrete_wall/precast_concrete_wall_arm_2k.jpg",
+    "Textures/PolyHaven/precast_concrete_wall/precast_concrete_wall_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/precast_concrete_wall",
+   "author": "Dimitrios Savva",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Rusty Corrugated Iron",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/rusty_corrugated_iron/rusty_corrugated_iron_diff_2k.jpg",
+    "Textures/PolyHaven/rusty_corrugated_iron/rusty_corrugated_iron_nor_gl_2k.jpg",
+    "Textures/PolyHaven/rusty_corrugated_iron/rusty_corrugated_iron_arm_2k.jpg",
+    "Textures/PolyHaven/rusty_corrugated_iron/rusty_corrugated_iron_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/rusty_corrugated_iron",
+   "author": "Charlotte Baglioni",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Worn Corrugated Iron",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/worn_corrugated_iron/worn_corrugated_iron_diff_2k.jpg",
+    "Textures/PolyHaven/worn_corrugated_iron/worn_corrugated_iron_nor_gl_2k.jpg",
+    "Textures/PolyHaven/worn_corrugated_iron/worn_corrugated_iron_arm_2k.jpg",
+    "Textures/PolyHaven/worn_corrugated_iron/worn_corrugated_iron_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/worn_corrugated_iron",
+   "author": "Jenelle van Heerden, Dimitrios Savva",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Rusty Metal Sheet",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/rusty_metal_sheet/rusty_metal_sheet_diff_2k.jpg",
+    "Textures/PolyHaven/rusty_metal_sheet/rusty_metal_sheet_nor_gl_2k.jpg",
+    "Textures/PolyHaven/rusty_metal_sheet/rusty_metal_sheet_arm_2k.jpg",
+    "Textures/PolyHaven/rusty_metal_sheet/rusty_metal_sheet_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/rusty_metal_sheet",
+   "author": "Amal Kumar",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Metal Grate Rusty",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/metal_grate_rusty/metal_grate_rusty_diff_2k.jpg",
+    "Textures/PolyHaven/metal_grate_rusty/metal_grate_rusty_nor_gl_2k.jpg",
+    "Textures/PolyHaven/metal_grate_rusty/metal_grate_rusty_arm_2k.jpg",
+    "Textures/PolyHaven/metal_grate_rusty/metal_grate_rusty_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/metal_grate_rusty",
+   "author": "Rob Tuytel, Dimitrios Savva",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Green Metal Rust",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/green_metal_rust/green_metal_rust_diff_2k.jpg",
+    "Textures/PolyHaven/green_metal_rust/green_metal_rust_nor_gl_2k.jpg",
+    "Textures/PolyHaven/green_metal_rust/green_metal_rust_arm_2k.jpg",
+    "Textures/PolyHaven/green_metal_rust/green_metal_rust_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/green_metal_rust",
+   "author": "Rob Tuytel",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Blue Metal Plate",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/blue_metal_plate/blue_metal_plate_diff_2k.jpg",
+    "Textures/PolyHaven/blue_metal_plate/blue_metal_plate_nor_gl_2k.jpg",
+    "Textures/PolyHaven/blue_metal_plate/blue_metal_plate_arm_2k.jpg",
+    "Textures/PolyHaven/blue_metal_plate/blue_metal_plate_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/blue_metal_plate",
+   "author": "Rob Tuytel",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Rusty Painted Metal",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/rusty_painted_metal/rusty_painted_metal_diff_2k.jpg",
+    "Textures/PolyHaven/rusty_painted_metal/rusty_painted_metal_nor_gl_2k.jpg",
+    "Textures/PolyHaven/rusty_painted_metal/rusty_painted_metal_arm_2k.jpg",
+    "Textures/PolyHaven/rusty_painted_metal/rusty_painted_metal_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/rusty_painted_metal",
+   "author": "Amal Kumar",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Rusted Shutter",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/rusted_shutter/rusted_shutter_diff_2k.jpg",
+    "Textures/PolyHaven/rusted_shutter/rusted_shutter_nor_gl_2k.jpg",
+    "Textures/PolyHaven/rusted_shutter/rusted_shutter_arm_2k.jpg",
+    "Textures/PolyHaven/rusted_shutter/rusted_shutter_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/rusted_shutter",
+   "author": "Dimitrios Savva",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Red Brick 03",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/red_brick_03/red_brick_03_diff_2k.jpg",
+    "Textures/PolyHaven/red_brick_03/red_brick_03_nor_gl_2k.jpg",
+    "Textures/PolyHaven/red_brick_03/red_brick_03_arm_2k.jpg",
+    "Textures/PolyHaven/red_brick_03/red_brick_03_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/red_brick_03",
+   "author": "Rob Tuytel",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Factory Brick",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/factory_brick/factory_brick_diff_2k.jpg",
+    "Textures/PolyHaven/factory_brick/factory_brick_nor_gl_2k.jpg",
+    "Textures/PolyHaven/factory_brick/factory_brick_arm_2k.jpg",
+    "Textures/PolyHaven/factory_brick/factory_brick_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/factory_brick",
+   "author": "Rob Tuytel",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Asphalt 02",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/asphalt_02/asphalt_02_diff_2k.jpg",
+    "Textures/PolyHaven/asphalt_02/asphalt_02_nor_gl_2k.jpg",
+    "Textures/PolyHaven/asphalt_02/asphalt_02_arm_2k.jpg",
+    "Textures/PolyHaven/asphalt_02/asphalt_02_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/asphalt_02",
+   "author": "Rob Tuytel",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Worn Asphalt",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/worn_asphalt/worn_asphalt_diff_2k.jpg",
+    "Textures/PolyHaven/worn_asphalt/worn_asphalt_nor_gl_2k.jpg",
+    "Textures/PolyHaven/worn_asphalt/worn_asphalt_arm_2k.jpg",
+    "Textures/PolyHaven/worn_asphalt/worn_asphalt_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/worn_asphalt",
+   "author": "Amal Kumar",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Plywood",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/plywood/plywood_diff_2k.jpg",
+    "Textures/PolyHaven/plywood/plywood_nor_gl_2k.jpg",
+    "Textures/PolyHaven/plywood/plywood_arm_2k.jpg",
+    "Textures/PolyHaven/plywood/plywood_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/plywood",
+   "author": "Rob Tuytel",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Weathered Planks",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/weathered_planks/weathered_planks_diff_2k.jpg",
+    "Textures/PolyHaven/weathered_planks/weathered_planks_nor_gl_2k.jpg",
+    "Textures/PolyHaven/weathered_planks/weathered_planks_arm_2k.jpg",
+    "Textures/PolyHaven/weathered_planks/weathered_planks_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/weathered_planks",
+   "author": "Dario Barresi, Dimitrios Savva",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Dirty Concrete",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/dirty_concrete/dirty_concrete_diff_2k.jpg",
+    "Textures/PolyHaven/dirty_concrete/dirty_concrete_nor_gl_2k.jpg",
+    "Textures/PolyHaven/dirty_concrete/dirty_concrete_arm_2k.jpg",
+    "Textures/PolyHaven/dirty_concrete/dirty_concrete_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/dirty_concrete",
+   "author": "Rob Tuytel",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Painted Concrete",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/painted_concrete/painted_concrete_diff_2k.jpg",
+    "Textures/PolyHaven/painted_concrete/painted_concrete_nor_gl_2k.jpg",
+    "Textures/PolyHaven/painted_concrete/painted_concrete_arm_2k.jpg",
+    "Textures/PolyHaven/painted_concrete/painted_concrete_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/painted_concrete",
+   "author": "Dario Barresi, Dimitrios Savva",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Concrete Block Wall",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/concrete_block_wall/concrete_block_wall_diff_2k.jpg",
+    "Textures/PolyHaven/concrete_block_wall/concrete_block_wall_nor_gl_2k.jpg",
+    "Textures/PolyHaven/concrete_block_wall/concrete_block_wall_arm_2k.jpg",
+    "Textures/PolyHaven/concrete_block_wall/concrete_block_wall_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/concrete_block_wall",
+   "author": "Charlotte Baglioni",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Rough Concrete",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/rough_concrete/rough_concrete_diff_2k.jpg",
+    "Textures/PolyHaven/rough_concrete/rough_concrete_nor_gl_2k.jpg",
+    "Textures/PolyHaven/rough_concrete/rough_concrete_arm_2k.jpg",
+    "Textures/PolyHaven/rough_concrete/rough_concrete_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/rough_concrete",
+   "author": "Dimitrios Savva",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Metal Plate 02",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/metal_plate_02/metal_plate_02_diff_2k.jpg",
+    "Textures/PolyHaven/metal_plate_02/metal_plate_02_nor_gl_2k.jpg",
+    "Textures/PolyHaven/metal_plate_02/metal_plate_02_arm_2k.jpg",
+    "Textures/PolyHaven/metal_plate_02/metal_plate_02_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/metal_plate_02",
+   "author": "Rob Tuytel",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Rusty Metal Grid",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/rusty_metal_grid/rusty_metal_grid_diff_2k.jpg",
+    "Textures/PolyHaven/rusty_metal_grid/rusty_metal_grid_nor_gl_2k.jpg",
+    "Textures/PolyHaven/rusty_metal_grid/rusty_metal_grid_arm_2k.jpg",
+    "Textures/PolyHaven/rusty_metal_grid/rusty_metal_grid_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/rusty_metal_grid",
+   "author": "Amal Kumar",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Wood Planks Dirt",
+   "type": "texture",
+   "files": [
+    "Textures/PolyHaven/wood_planks_dirt/wood_planks_dirt_diff_2k.jpg",
+    "Textures/PolyHaven/wood_planks_dirt/wood_planks_dirt_nor_gl_2k.jpg",
+    "Textures/PolyHaven/wood_planks_dirt/wood_planks_dirt_arm_2k.jpg",
+    "Textures/PolyHaven/wood_planks_dirt/wood_planks_dirt_disp_2k.jpg"
+   ],
+   "source": "https://polyhaven.com/a/wood_planks_dirt",
+   "author": "Rob Tuytel",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Empty Warehouse 01",
+   "type": "hdri",
+   "files": [
+    "HDRI/empty_warehouse_01_2k.hdr"
+   ],
+   "source": "https://polyhaven.com/a/empty_warehouse_01",
+   "author": "Sergej Majboroda",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Abandoned Garage",
+   "type": "hdri",
+   "files": [
+    "HDRI/abandoned_garage_2k.hdr"
+   ],
+   "source": "https://polyhaven.com/a/abandoned_garage",
+   "author": "Grzegorz Wronkowski",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Burnt Warehouse",
+   "type": "hdri",
+   "files": [
+    "HDRI/burnt_warehouse_2k.hdr"
+   ],
+   "source": "https://polyhaven.com/a/burnt_warehouse",
+   "author": "Sergej Majboroda",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Docklands 01",
+   "type": "hdri",
+   "files": [
+    "HDRI/docklands_01_2k.hdr"
+   ],
+   "source": "https://polyhaven.com/a/docklands_01",
+   "author": "Savva Zakharov",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Industrial Sunset (Pure Sky)",
+   "type": "hdri",
+   "files": [
+    "HDRI/industrial_sunset_puresky_2k.hdr"
+   ],
+   "source": "https://polyhaven.com/a/industrial_sunset_puresky",
+   "author": "Jarod Guest, Sergej Majboroda",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Hangar Interior",
+   "type": "hdri",
+   "files": [
+    "HDRI/hangar_interior_2k.hdr"
+   ],
+   "source": "https://polyhaven.com/a/hangar_interior",
+   "author": "Dimitrios Savva, Jarod Guest",
+   "license": "CC0-1.0"
+  },
+  {
+   "name": "Helmet",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/Helmet.glb"
+   ],
+   "source": "https://3dassets.dev/assets/fps-weapon-set-and-firing-range-ballistic-helmet-ecff617d",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "PlateCarrier",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/PlateCarrier.glb"
+   ],
+   "source": "https://3dassets.dev/assets/fps-survival-forest-outpost-plate-carrier-2ac4f423",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "Backpack",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/Backpack.glb"
+   ],
+   "source": "https://3dassets.dev/assets/ski-resort-and-snow-park-backpack-4146e431",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "Tourniquet",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/Tourniquet.glb"
+   ],
+   "source": "https://3dassets.dev/assets/field-medicine-and-recovery-tourniquet-e52e2ef7",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "Bandage",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/Bandage.glb"
+   ],
+   "source": "https://3dassets.dev/assets/battle-royale-town-and-airfield-bandage-roll-8abada24",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "Medkit",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/Medkit.glb"
+   ],
+   "source": "https://3dassets.dev/assets/backcountry-snowboarding-and-avalanche-safety-first-ai-6550a0e2",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "DefuseKit",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/DefuseKit.glb"
+   ],
+   "source": "https://3dassets.dev/assets/trench-line-1917-wire-cutters-7f9f5a91",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "BreachingCharge",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/BreachingCharge.glb"
+   ],
+   "source": "https://3dassets.dev/assets/mega-weapon-pack-demolition-charge-69fe4f85",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "SecurityCamera",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/SecurityCamera.glb"
+   ],
+   "source": "https://3dassets.dev/assets/animated-mechanisms-kit-security-camera-yoke-12d335bf",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "Radio",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/Radio.glb"
+   ],
+   "source": "https://3dassets.dev/assets/armoured-column-and-field-camp-radio-set-e2dd3ccc",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "AmmoCrate",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/AmmoCrate.glb"
+   ],
+   "source": "https://3dassets.dev/assets/arena-shooter-map-kit-ammo-crate-9c83becd",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "Magazine",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/Magazine.glb"
+   ],
+   "source": "https://3dassets.dev/assets/mega-weapon-pack-rifle-magazine-extended-269200f0",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "RedDot",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/RedDot.glb"
+   ],
+   "source": "https://3dassets.dev/assets/arctic-station-fps-kit-red-dot-sight-6267c323",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "Scope",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/Scope.glb"
+   ],
+   "source": "https://3dassets.dev/assets/mega-weapon-pack-scope-4x-56b1bd7b",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "Suppressor",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/Suppressor.glb"
+   ],
+   "source": "https://3dassets.dev/assets/mega-weapon-pack-rifle-suppressor-bc982d77",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "Flashlight",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/Flashlight.glb"
+   ],
+   "source": "https://3dassets.dev/assets/halloween-slasher-street-dropped-flashlight-6285f107",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "ShippingContainer",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/ShippingContainer.glb"
+   ],
+   "source": "https://3dassets.dev/assets/fps-survival-forest-outpost-shipping-container-9486906f",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "Forklift",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/Forklift.glb"
+   ],
+   "source": "https://3dassets.dev/assets/car-factory-production-line-forklift-4daac5a1",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "Pallet",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/Pallet.glb"
+   ],
+   "source": "https://3dassets.dev/assets/factory-conveyor-network-factory-conveyor-network-logi-394142fd",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "PalletJack",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/PalletJack.glb"
+   ],
+   "source": "https://3dassets.dev/assets/factory-conveyor-network-factory-conveyor-network-logi-9e206c0e",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "Bollard",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/Bollard.glb"
+   ],
+   "source": "https://3dassets.dev/assets/cruise-ship-deck-and-lounge-cruise-ship-deck-and-loung-bc129f4f",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "DockCrane",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/DockCrane.glb"
+   ],
+   "source": "https://3dassets.dev/assets/shipyard-and-dry-dock-shipyard-and-dry-dock-dock-gantr-1e428ef8",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "Ladder",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/Ladder.glb"
+   ],
+   "source": "https://3dassets.dev/assets/wipe-day-survival-island-scaffold-ladder-49b8ed17",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "Catwalk",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/Catwalk.glb"
+   ],
+   "source": "https://3dassets.dev/assets/arena-shooter-map-kit-catwalk-straight-fdcc612a",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "Foregrip",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/Foregrip.glb"
+   ],
+   "source": "https://3dassets.dev/assets/fps-weapon-set-and-firing-range-vertical-foregrip-3d061064",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "RollerDoor",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/RollerDoor.glb"
+   ],
+   "source": "https://3dassets.dev/assets/animated-mechanisms-kit-roller-shutter-b7ab2d50",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "SandbagWall",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/SandbagWall.glb"
+   ],
+   "source": "https://3dassets.dev/assets/armoured-column-and-field-camp-sandbag-wall-straight-1f32a2f5",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "ConcreteBarrier",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/ConcreteBarrier.glb"
+   ],
+   "source": "https://3dassets.dev/assets/battle-royale-town-and-airfield-jersey-barrier-98fd4d40",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "IBCTank",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/IBCTank.glb"
+   ],
+   "source": "https://3dassets.dev/assets/factory-conveyor-network-factory-conveyor-network-logi-466fda8a",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "Workbench",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/Workbench.glb"
+   ],
+   "source": "https://3dassets.dev/assets/shipyard-and-dry-dock-shipyard-and-dry-dock-fitters-wo-14a123d7",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "Locker",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/Locker.glb"
+   ],
+   "source": "https://3dassets.dev/assets/abandoned-weather-station-and-storm-shelter-emergency--5943b1e9",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "OfficeDesk",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/OfficeDesk.glb"
+   ],
+   "source": "https://3dassets.dev/assets/downtown-office-interiors-desk-1600-panel-end-9c79542d",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "Generator",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/Generator.glb"
+   ],
+   "source": "https://3dassets.dev/assets/nuclear-power-station-and-control-room-diesel-backup-g-2bfffe1f",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "FloodLight",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/FloodLight.glb"
+   ],
+   "source": "https://3dassets.dev/assets/container-inspection-and-customs-yard-container-inspec-7360fe6a",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  },
+  {
+   "name": "CableReel",
+   "type": "prop",
+   "files": [
+    "Props/3DAssets/CableReel.glb"
+   ],
+   "source": "https://3dassets.dev/assets/abandoned-weather-station-and-storm-shelter-cable-reel-80c1d8e9",
+   "author": "3D Assets (3dassets.dev)",
+   "license": "CC0-1.0",
+   "aiGenerated": true
+  }
+ ]
+}
