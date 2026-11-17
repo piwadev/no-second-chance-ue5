@@ -1,8 +1,7 @@
 // NSC Launcher — Electron main process.
-const { app, BrowserWindow, protocol, net, Menu, shell, ipcMain, dialog } = require('electron');
+const { app, BrowserWindow, Menu, shell, ipcMain, dialog } = require('electron');
 const path = require('path');
 const fs = require('fs');
-const { pathToFileURL } = require('url');
 const { spawn } = require('child_process');
 
 const P = require('./paths');
@@ -13,11 +12,10 @@ const saves = require('./saves');
 const updater = require('./updater');
 
 const TEST = !!process.env.NSC_TEST;
-protocol.registerSchemesAsPrivileged([{ scheme: 'nsc', privileges: { standard: true, secure: true, supportFetchAPI: true, corsEnabled: true, stream: true } }]);
 updater.init(app.getVersion(), process.resourcesPath || path.join(__dirname, '..', 'resources'));
 if (!app.isPackaged && fs.existsSync(path.join(__dirname, '..', 'resources', 'bundled'))) updater.init(app.getVersion(), path.join(__dirname, '..', 'resources'));
 
-let win = null, gameWin = null, latest = null, busy = false, currentDir = null;
+let win = null, gameProc = null, latest = null, busy = false, currentDir = null;
 let status = { state: 'idle', message: '' };
 const send = (ch, payload) => { if (win && !win.isDestroyed()) win.webContents.send(ch, payload); };
 const setStatus = s => { status = s; send('l:status', status); };
@@ -33,30 +31,28 @@ const confirm = async (message, detail) => {
 };
 const ts = () => new Date().toISOString().replace(/[-:T]/g, '').slice(0, 14).replace(/^(\d{8})(\d{6})$/, '$1-$2');
 
-// ------------------------------------------------------------------ game window
+// ------------------------------------------------------------------ game process (Unreal Engine build)
 function openGame() {
-  if (gameWin) { gameWin.focus(); return { ok: true }; }
+  if (gameProc) return { ok: true, running: true };
   refreshCurrent(); if (!currentDir) return { ok: false, error: 'The game is not installed yet.' };
-  gameWin = new BrowserWindow({
-    width: 1280, height: 800, minWidth: 800, minHeight: 500, backgroundColor: '#171A1D', title: 'NO SECOND CHANCE', autoHideMenuBar: true, show: false,
-    webPreferences: { preload: path.join(__dirname, 'preload-game.js'), backgroundThrottling: false, contextIsolation: true, sandbox: true },
-  });
-  const gw = gameWin; gw.once('ready-to-show', () => gw.show());
-  gw.webContents.setWindowOpenHandler(({ url }) => { if (/^https:\/\//.test(url)) shell.openExternal(url); return { action: 'deny' }; });
-  gw.webContents.on('will-navigate', (e, url) => { if (!url.startsWith('nsc://')) e.preventDefault(); });
-  gw.webContents.on('before-input-event', (e, input) => {
-    if (input.type !== 'keyDown') return;
-    if (input.key === 'F11') gw.setFullScreen(!gw.isFullScreen());
-    if (input.key === 'F12' && (TEST || process.env.NSC_DEBUG)) gw.webContents.toggleDevTools();
-  });
-  if (TEST) gw.webContents.on('console-message', (_e, level, message) => { if (level >= 2) log.warn('[game console]', message); });
-  gw.loadURL('nsc://game/index.html');
-  if (win && !win.isDestroyed()) { if (settings.get().closeLauncherOnPlay) win.hide(); else win.minimize(); }
-  gw.on('closed', async () => {
-    gameWin = null; saves.backupNow('save');
+  const exe = path.join(currentDir, updater.GAME_EXE);
+  // NSC_GAME_CMD lets the automated test run a stand-in program instead of the Windows executable
+  const cmd = process.env.NSC_GAME_CMD ? process.env.NSC_GAME_CMD.split('|') : [exe];
+  if (!process.env.NSC_GAME_CMD && !fs.existsSync(exe)) return { ok: false, error: 'NoSecondChance.exe is missing - reinstall the game (Settings > Roll back, or Check for updates).' };
+  saves.maybeBackup();
+  let child;
+  try { child = spawn(cmd[0], cmd.slice(1), { cwd: currentDir, detached: false, stdio: 'ignore', windowsHide: false }); }
+  catch (e) { return { ok: false, error: 'Could not start the game: ' + e.message }; }
+  gameProc = child; const started = Date.now();
+  child.on('error', e => { log.error('game process error', e); if (gameProc === child) gameProc = null; send('l:toast', { kind: 'bad', text: 'Could not start the game: ' + e.message }); if (win && !win.isDestroyed()) { win.show(); send('l:state-changed'); } });
+  child.on('exit', code => {
+    if (gameProc !== child) return; gameProc = null; log.info('game exited', code, 'after', Math.round((Date.now() - started) / 1000), 's');
+    saves.backupNow('save');
     const s = settings.get(); if (s.autoCloud && s.cloudDir) { try { const f = saves.cloudBackup(s.cloudDir); log.info('auto cloud backup', f); } catch (e) { log.warn('auto cloud backup failed', e); } }
+    if (code && Date.now() - started < 8000) send('l:toast', { kind: 'bad', text: `The game closed right away (exit code ${code}). Check that the DirectX/VC++ prerequisites are installed.` });
     if (win && !win.isDestroyed()) { win.show(); win.focus(); send('l:state-changed'); } else app.quit();
   });
+  if (win && !win.isDestroyed()) { if (settings.get().closeLauncherOnPlay) win.hide(); else win.minimize(); }
   send('l:state-changed'); return { ok: true };
 }
 
@@ -72,7 +68,7 @@ function createWindow() {
   win.webContents.setWindowOpenHandler(() => ({ action: 'deny' }));
   win.webContents.on('will-navigate', e => e.preventDefault());
   win.loadFile(path.join(__dirname, '..', 'ui', 'index.html'));
-  win.on('closed', () => { win = null; if (!gameWin) app.quit(); });
+  win.on('closed', () => { win = null; if (!gameProc) app.quit(); });
 }
 
 // ------------------------------------------------------------------ update logic
@@ -95,7 +91,7 @@ async function checkNow(manual) {
   } finally { busy = false; }
 }
 async function installNow() {
-  if (busy) return; if (gameWin) return { ok: false, error: 'Close the game before updating.' };
+  if (busy) return; if (gameProc) return { ok: false, error: 'Close the game before updating.' };
   if (!latest || !latest.updateAvailable) return { ok: false, error: 'No update available.' };
   busy = true; setStatus({ state: 'downloading', message: `Downloading ${latest.version}…` });
   try {
@@ -117,7 +113,7 @@ async function startup() {
 
 function fullState() {
   const inst = updater.installedInfo();
-  return { launcherVersion: app.getVersion(), platform: process.platform, installed: inst, latest, status, busy, gameRunning: !!gameWin, settings: settings.get(), save: saves.info(), paths: { saves: P.savesDir, game: P.gameDir, log: P.logFile }, repoUrl: updater.RELEASES_PAGE };
+  return { launcherVersion: app.getVersion(), platform: process.platform, installed: inst, latest, status, busy, gameRunning: !!gameProc, settings: settings.get(), save: saves.info(), paths: { saves: P.ueSaveDir, game: P.gameDir, log: P.logFile }, repoUrl: updater.RELEASES_PAGE };
 }
 
 function registerIpc() {
@@ -126,24 +122,24 @@ function registerIpc() {
   H('l:check', async () => { await checkNow(true); return fullState(); });
   H('l:install', async () => { const r = await installNow(); return { ...r, state: fullState() }; });
   H('l:play', () => openGame());
-  H('l:rollback', async () => { if (gameWin) return { ok: false, error: 'Close the game first.' }; if (!(await confirm('Switch back to the previous game version?', 'Your save is not affected.'))) return { ok: false, cancelled: true }; updater.rollback(); refreshCurrent(); if (latest) latest.updateAvailable = updater.cmpVer(latest.version, updater.installedInfo().current || '0') > 0; setStatus(latest && latest.updateAvailable ? { state: 'update', message: `Update ${latest.version} is available.` } : { state: 'uptodate', message: 'Rolled back.' }); return { ok: true, state: fullState() }; });
-  H('l:openSaves', async () => { fs.mkdirSync(P.savesDir, { recursive: true }); const r = await shell.openPath(P.savesDir); return r ? { ok: false, error: r } : { ok: true }; });
+  H('l:rollback', async () => { if (gameProc) return { ok: false, error: 'Close the game first.' }; if (!(await confirm('Switch back to the previous game version?', 'Your save is not affected.'))) return { ok: false, cancelled: true }; updater.rollback(); refreshCurrent(); if (latest) latest.updateAvailable = updater.cmpVer(latest.version, updater.installedInfo().current || '0') > 0; setStatus(latest && latest.updateAvailable ? { state: 'update', message: `Update ${latest.version} is available.` } : { state: 'uptodate', message: 'Rolled back.' }); return { ok: true, state: fullState() }; });
+  H('l:openSaves', async () => { fs.mkdirSync(P.ueSaveDir, { recursive: true }); const r = await shell.openPath(P.ueSaveDir); return r ? { ok: false, error: r } : { ok: true }; });
   H('l:backupSave', async () => {
-    let f = pickPath('save'); if (!f) { const r = await dialog.showSaveDialog(win, { title: 'Back up save', defaultPath: path.join(app.getPath('documents'), `NSC-save-${ts()}.json`), filters: [{ name: 'NSC save', extensions: ['json'] }] }); if (r.canceled) return { ok: false, cancelled: true }; f = r.filePath; }
-    if (fs.existsSync(f) && fs.statSync(f).isDirectory()) f = path.join(f, `NSC-save-${ts()}.json`);
+    let f = pickPath('save'); if (!f) { const r = await dialog.showSaveDialog(win, { title: 'Back up save', defaultPath: path.join(app.getPath('documents'), `NSC-save-${ts()}.sav`), filters: [{ name: 'NSC save', extensions: ['sav'] }] }); if (r.canceled) return { ok: false, cancelled: true }; f = r.filePath; }
+    if (fs.existsSync(f) && fs.statSync(f).isDirectory()) f = path.join(f, `NSC-save-${ts()}.sav`);
     saves.exportTo(f); return { ok: true, file: f };
   });
   H('l:restoreSave', async () => {
-    if (gameWin) return { ok: false, error: 'Close the game before restoring a save.' };
-    let f = pickPath('open'); if (!f) { const r = await dialog.showOpenDialog(win, { title: 'Restore save', properties: ['openFile'], filters: [{ name: 'NSC save', extensions: ['json'] }] }); if (r.canceled || !r.filePaths[0]) return { ok: false, cancelled: true }; f = r.filePaths[0]; }
-    const err = saves.validate(fs.readFileSync(f, 'utf8')); if (err) return { ok: false, error: 'That file is ' + err + '.' };
+    if (gameProc) return { ok: false, error: 'Close the game before restoring a save.' };
+    let f = pickPath('open'); if (!f) { const r = await dialog.showOpenDialog(win, { title: 'Restore save', properties: ['openFile'], filters: [{ name: 'NSC save', extensions: ['sav'] }] }); if (r.canceled || !r.filePaths[0]) return { ok: false, cancelled: true }; f = r.filePaths[0]; }
+    const err = saves.validate(f); if (err) return { ok: false, error: 'That file is ' + err + '.' };
     if (!(await confirm('Replace your current save with this file?', 'Your current save is backed up automatically first (see the saves folder → backups).'))) return { ok: false, cancelled: true };
     saves.importFrom(f); send('l:state-changed'); return { ok: true, file: f };
   });
   H('l:cloudBackup', async () => { const f = saves.cloudBackup(settings.get().cloudDir); send('l:toast', { kind: 'good', text: 'Backed up to ' + f }); return { ok: true, file: f }; });
   H('l:cloudRestore', async () => {
-    if (gameWin) return { ok: false, error: 'Close the game before restoring a save.' };
-    const f = saves.cloudLatest(settings.get().cloudDir); if (!f) return { ok: false, error: 'No backup found in the cloud folder (NSC-save-latest.json).' };
+    if (gameProc) return { ok: false, error: 'Close the game before restoring a save.' };
+    const f = saves.cloudLatest(settings.get().cloudDir); if (!f) return { ok: false, error: 'No backup found in the cloud folder (NSC-save-latest.sav).' };
     if (!(await confirm('Restore the latest cloud backup?', f + '\nYour current save is backed up first.'))) return { ok: false, cancelled: true };
     saves.importFrom(f); send('l:state-changed'); return { ok: true, file: f };
   });
@@ -161,25 +157,12 @@ function registerIpc() {
     try { const f = await updater.downloadLauncher(latest.launcher, progress); spawn(f, ['--updated'], { detached: true, stdio: 'ignore' }).unref(); setTimeout(() => app.quit(), 400); return { ok: true }; }
     catch (e) { setStatus({ state: 'error', message: 'Launcher update failed: ' + e.message }); return { ok: false, error: e.message }; } finally { busy = false; }
   });
-  // game bridge (synchronous, only for the game window)
-  const fromGame = e => gameWin && e.sender === gameWin.webContents;
-  ipcMain.on('nsc:loadSave', e => { e.returnValue = fromGame(e) ? saves.load() : null; });
-  ipcMain.on('nsc:saveSync', (e, text, reason) => { try { e.returnValue = fromGame(e) ? saves.save(text, reason) : false; } catch (err) { log.error('save failed', err); e.returnValue = false; } });
-  ipcMain.on('nsc:resetSave', e => { e.returnValue = fromGame(e) ? saves.reset() : false; });
-  ipcMain.on('nsc:info', e => { e.returnValue = fromGame(e) ? saves.info() : null; });
 }
 
 if (!app.requestSingleInstanceLock()) app.quit();
 else {
-  app.on('second-instance', () => { const w = win || gameWin; if (w) { if (w.isMinimized()) w.restore(); w.show(); w.focus(); } });
+  app.on('second-instance', () => { const w = win; if (w) { if (w.isMinimized()) w.restore(); w.show(); w.focus(); } });
   app.whenReady().then(() => {
-    protocol.handle('nsc', req => {
-      if (!currentDir) return new Response('Game not installed', { status: 404 });
-      const u = new URL(req.url); let p = decodeURIComponent(u.pathname); if (p === '/' || p === '') p = '/index.html';
-      const f = path.normalize(path.join(currentDir, p));
-      if (f !== currentDir && !f.startsWith(currentDir + path.sep)) return new Response('Forbidden', { status: 403 });
-      return net.fetch(pathToFileURL(f).toString());
-    });
     registerIpc(); refreshCurrent(); createWindow();
     win.webContents.once('did-finish-load', () => startup());
     app.on('activate', () => { if (!BrowserWindow.getAllWindows().length) createWindow(); });

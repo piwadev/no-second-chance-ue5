@@ -1,34 +1,40 @@
-# NSC Launcher
+# NSC Launcher (Unreal Engine build)
 
-Small Electron app (installer: NSIS, per-user) that installs, updates and starts the game.
+Electron launcher + auto-updater for **NO SECOND CHANCE** (the UE5 game in this repo). Installer: `NSC-Launcher-Setup.exe`
+(NSIS, one-click, per-user, desktop + start-menu shortcut).
 
-## How updating works
-1. On start the launcher calls `GET https://api.github.com/repos/piwadev/no-second-chance/releases/latest` (unauthenticated).
-2. The release must contain `manifest.json` (version, game zip name, **sha256**, size, optional launcher entry) and the game zip `nsc-game-<version>.zip` (web files and CC0 art, ~15 MB).
-3. If the version is newer than the installed one, the zip is streamed to `%LOCALAPPDATA%\NoSecondChance\downloads`, its sha256 is checked while downloading, it is extracted (zip-slip safe) to `...\game\<version>.tmp`, validated (`index.html`, `version.json` must match), renamed to `...\game\<version>` and `state.json` is switched: `{current, previous}`. Only current + previous are kept (rollback in Settings).
-4. Play opens the game in its own window, served from the installed folder through a private `nsc://` protocol. No web server, no network needed.
-5. Launcher self-update: `manifest.json` carries `launcher: {version, url, sha256}`. If newer than the running launcher, a "New launcher available" button downloads the installer (sha256-verified) and runs it (user data and saves are kept).
-6. First run works offline: the installer contains a copy of the game version it was built with.
+## What it does
+* **Update check** – `GET https://api.github.com/repos/piwadev/no-second-chance-ue5/releases/latest`, reads the release's
+  `manifest.json` (written by `Tools/release.ps1`). If the REST API is rate-limited it falls back to
+  `releases/latest/download/manifest.json`.
+* **Download + verify** – downloads `NSC-Game-<ver>.zip` (or its `.001/.002…` parts when the build is over ~1.9 GB),
+  checks the SHA-256 of every part and of the joined zip, then **streams** the extraction (yauzl, zip-slip guarded) into
+  `%LOCALAPPDATA%\NoSecondChance\game\<ver>`. A version is only accepted if it contains `NoSecondChance.exe` and a
+  `version.json` with the expected version. The previous version is kept for **rollback** (Settings).
+* **Play** – starts `NoSecondChance.exe` from the current version folder, minimizes (or hides) itself and comes back
+  when the game exits.
+* **Saves** – the game writes its SaveGame slots to `%LOCALAPPDATA%\NoSecondChance\Saved\SaveGames` (outside the version
+  folders). The launcher backs them up on play/exit (`%APPDATA%\NoSecondChance\saves\backups`, last 5), and can export /
+  import the main slot (`NSCSettings.sav`, GVAS header checked) or copy it to a cloud-synced folder (`NSC-save-latest.sav` + 10 copies).
+* **Self-update** – if `manifest.launcher.version` is newer than the running launcher, a banner offers to download
+  `NSC-Launcher-Setup.exe` (SHA-256 checked) and runs it. `manifest.minLauncher` blocks game updates that need a newer launcher.
 
-## Saves
-`%APPDATA%\NoSecondChance\saves\nsc_save.json` – outside every versioned game folder, so updates, rollbacks and reinstalls can't touch it. Writes are atomic (tmp + rename), a rotating backup (last 5) is kept in `saves\backups`, and a corrupt save falls back to the newest valid backup.
-The game talks to the launcher through a preload bridge (`window.nscNative`); in a normal browser it keeps using `localStorage`. A browser/localStorage save is migrated into the file on first run in the launcher.
-Launcher buttons: Open save folder, Back up save (export JSON), Restore save (import JSON, current save backed up first), Cloud backup (copy to a folder you pick, e.g. inside Google Drive / OneDrive / Dropbox; optional auto-backup when you quit the game; keeps 10 copies + `NSC-save-latest.json`).
+## manifest.json
+```json
+{ "name": "NO SECOND CHANCE", "version": "0.2.0", "exe": "NoSecondChance.exe", "minLauncher": "2.0.0", "notes": "...",
+  "game": { "file": "NSC-Game-0.2.0.zip", "sha256": "…", "size": 2400000000,
+            "parts": [ { "file": "NSC-Game-0.2.0.zip.001", "sha256": "…", "size": 1992294400 },
+                       { "file": "NSC-Game-0.2.0.zip.002", "sha256": "…", "size": 407705600 } ] },
+  "launcher": { "version": "2.0.0", "file": "NSC-Launcher-Setup.exe", "sha256": "…", "size": 90000000 } }
+```
+`parts` is optional (only for zips over the part size).
 
 ## Develop / build
-```bash
-cd launcher && npm install
-npm start                 # run the launcher from source (uses the real GitHub API; set NSC_API to point at a mock)
-npm run dist              # Windows NSIS installer -> dist/NSC-Launcher-Setup.exe
-node test/e2e.mjs         # end-to-end test against a local mock release server (needs playwright-core + Linux electron)
 ```
-`npm run dist` on Linux/macOS needs `wine` (only to generate the NSIS uninstaller stub). Before building, `scripts/release.sh --launcher` puts the current game zip into `launcher/resources/bundled/`.
-
-Environment overrides (testing): `NSC_API`, `NSC_ROAMING`, `NSC_LOCAL`, `NSC_TEST=1`, `NSC_NO_BUNDLE=1`.
-
-## Publishing a game update
-```bash
-scripts/release.sh patch                 # or minor | major | 1.1.0 ; edit CHANGELOG.md first (## v1.0.1 section = release notes)
-scripts/release.sh minor --launcher      # also builds + attaches a new launcher installer
-scripts/release.sh patch --dry-run       # build everything, publish nothing
+cd launcher
+npm ci
+npm start                 # run unpackaged
+npm test                  # end-to-end test against a local mock release server (needs playwright-core)
+npm run dist              # dist/NSC-Launcher-Setup.exe (Windows, or Linux + wine)
 ```
+Environment overrides (used by the test): `NSC_API`, `NSC_ROAMING`, `NSC_LOCAL`, `NSC_UE_SAVES`, `NSC_GAME_CMD`, `NSC_TEST`.
