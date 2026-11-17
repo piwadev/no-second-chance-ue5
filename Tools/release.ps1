@@ -104,7 +104,7 @@ if ($Launcher) {
 } else {
   # keep advertising the newest published launcher so self-update keeps working
   try {
-    $prev = & gh release download --repo $Repo --pattern manifest.json --output - 2>$null | ConvertFrom-Json
+    $prev = (& gh release download --repo $Repo --pattern manifest.json --output - 2>$null | Out-String) | ConvertFrom-Json
     if ($prev.launcher) { $launcherEntry = $prev.launcher; $launcherEntry | Add-Member -NotePropertyName url -NotePropertyValue "https://github.com/$Repo/releases/download/v$($prev.version)/$($prev.launcher.file)" -Force }
   } catch { }
 }
@@ -116,7 +116,7 @@ $manifest = [ordered]@{
 }
 if ($launcherEntry) { $manifest.launcher = $launcherEntry }
 $mf = Join-Path $Out 'manifest.json'
-$manifest | ConvertTo-Json -Depth 6 | Set-Content -Encoding UTF8 $mf
+[IO.File]::WriteAllText($mf, ($manifest | ConvertTo-Json -Depth 6), (New-Object Text.UTF8Encoding $false))  # no BOM
 $uploads += $mf
 "$($game.sha256)  $zipName" | Set-Content -Encoding ASCII (Join-Path $Out 'SHA256SUMS.txt')
 $uploads += (Join-Path $Out 'SHA256SUMS.txt')

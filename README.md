@@ -22,7 +22,8 @@ scripts and an auto-updating launcher.
   In the engine's *Options* keep **Editor symbols** off, and **Windows** target platform on.
 * **Visual Studio 2022** (Community is fine) with *Game development with C++*, the *MSVC v143* toolset and a Windows 10/11 SDK
   (exactly what Epic lists for your engine version).
-* `curl.exe` and `tar.exe` (built into Windows 10 1803+). Optional: [GitHub CLI](https://cli.github.com) (`gh auth login`) for releases,
+* Git (Git LFS is *not* needed for a clone). `curl.exe`, `tar.exe` and PowerShell are built into Windows 10 1803+; no separate Python
+  install is needed (the editor's embedded Python runs the bootstrap). Optional: [GitHub CLI](https://cli.github.com) (`gh auth login`) for releases,
   Node.js 20+ to build the launcher.
 
 ## Build steps
@@ -42,6 +43,9 @@ Tools\Setup.bat
 Flags: `/skipdownload` (use your own `SourceAssets\`), `/skipbuild`, `/maponly` (only rebuild the maps), `/keepopen` (leave the editor open).
 Engine path: auto-detected (registry / default install folders); override with `set UE_ROOT=C:\Program Files\Epic Games\UE_5.5`.
 
+If the build step fails, open `NoSecondChance.uproject` (right-click → *Generate Visual Studio project files*), build
+`NoSecondChanceEditor` / *Development Editor* in Visual Studio to see the errors, then rerun `Tools\Setup.bat /skipdownload /skipbuild`.
+
 Then:
 * **Play in editor** — open `NoSecondChance.uproject`, open `/Game/NSC/Maps/L_Warehouse`, press Play (or start from `L_MainMenu`).
 * **Package** — `Tools\Package.bat` (Shipping; `Tools\Package.bat Development` for a dev build) → `Build\Windows\NoSecondChance.exe`.
@@ -49,7 +53,8 @@ Then:
   packages, zips, hashes, writes `manifest.json` and publishes a GitHub release the launcher picks up. Add `-Launcher` to also
   build and ship a new `NSC-Launcher-Setup.exe`; `-DryRun` to do everything except committing/publishing; `-Draft` for a draft release.
   Builds over ~1.9 GB are uploaded as `.zip.001/.002…` parts (GitHub's 2 GB per-file limit); the launcher joins and verifies them.
-* **Launcher** — `cd launcher && npm ci && npm run dist` → `launcher\dist\NSC-Launcher-Setup.exe`.
+* **Launcher** — `cd launcher && npm ci && npm run dist` → `launcher\dist\NSC-Launcher-Setup.exe` (or let `release.ps1 -Launcher` do it).
+  The first game release should use `-Launcher` so the release carries an installer; players then install only the launcher.
 
 ## Controls (default)
 WASD move · Mouse look · Space jump · Shift sprint · Alt walk · Ctrl/C crouch · LMB fire · RMB aim · R reload ·

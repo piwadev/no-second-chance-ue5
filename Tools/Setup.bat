@@ -44,7 +44,7 @@ if exist "%PROJ_DIR%\SourceAssets\Characters\Soldier_Male.glb" (
   echo [NSC] SourceAssets already present - skipping download ^(delete SourceAssets\Characters to force^).
   goto :build
 )
-echo [NSC] Downloading the CC0 asset pack ^(about 0.6 GB^) ...
+echo [NSC] Downloading the CC0 asset pack ^(about 0.8 GB^) ...
 if not exist "%PROJ_DIR%\Build\Download" mkdir "%PROJ_DIR%\Build\Download"
 pushd "%PROJ_DIR%\Build\Download"
 curl.exe -fL --retry 3 -o "%ASSET_ZIP%.sha256" "%ASSET_URL%/%ASSET_ZIP%.sha256" || goto :dlfail
